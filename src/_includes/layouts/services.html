@@ -1,0 +1,167 @@
+{% set assetHash = global.random() %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "partials/head.html" %}
+
+<body id="{{ site.siteID }}">
+
+{% include "partials/header.html" %}
+
+<div class="layout" data-layout="madrid">
+
+<div>
+<h1 data-size="3xl">{{ title }}</h1>
+{% if lede %}{{ lede | markdown | safe }}{% endif %}
+
+<div class="btn-cta">
+<a href="/contact" class="btn">Discuss a project</a>
+<a href="/case-studies/" class="btn" data-variant="secondary">See proof</a>
+</div><!-- btn-cta -->
+</div><!-- one -->
+
+<div>
+{% if needsSection %}
+<h2>{{ needsSection.title }}</h2>
+<p>{{ needsSection.text }}</p>
+{% endif %}
+</div><!-- two -->
+
+</div><!-- layout -->
+
+
+
+
+
+<hr data-function="spacer">
+
+<div class="layout" data-layout="vilnius">
+
+{% if options and options.items %}
+{% for item in options.items %}
+<div>
+<h3>{{ item.itemHeadline }}</h3>
+<p>{{ item.itemSummary }}</p>
+<div class="btn-cta">
+<a href="/contact/" class="btn" data-variant="secondary">Talk to us</a>
+</div><!-- btn-cta -->
+</div>
+{% endfor %}
+{% endif %}
+
+</div><!-- layout -->
+
+
+
+
+
+<hr data-function="spacer">
+
+<div class="layout" data-layout="madrid">
+
+<div>
+{% if supportSection %}
+<h2 data-size="2xl">{{ supportSection.title }}</h2>
+<p>{{ supportSection.text }}</p>
+{% endif %}
+</div><!-- one -->
+
+</div><!-- layout -->
+
+
+
+
+
+<hr data-function="spacer">
+
+<div class="layout" data-layout="amsterdam">
+
+<div data-layout="grid">
+
+{% for item in collections.servicesItems %}
+<div>
+<h3>{{ item.data.title }}</h3>
+{% if item.data.descripion %}<p>{{ item.data.descripion }}</p>{% endif %}
+
+{% if item.data.list and item.data.list.items %}
+<ul>
+{% for listItem in item.data.list.items %}
+{% if listItem.listItem %}<li>{{ listItem.listItem }}</li>{% endif %}
+{% endfor %}
+</ul>
+{% endif %}
+
+{% if item.data.outcome %}<p><b>Outcome:</b> {{ item.data.outcome }}</p>{% endif %}
+</div>
+{% endfor %}
+
+</div><!-- grid -->
+
+</div><!-- layout -->
+
+
+
+
+
+<hr data-function="spacer">
+
+<div class="layout" data-layout="madrid">
+
+<div>
+{% if capabilitySection %}
+<h2 data-size="2xl">{{ capabilitySection.title }}</h2>
+<p>{{ capabilitySection.text }}</p>
+{% endif %}
+</div><!-- one -->
+
+</div><!-- layout -->
+
+<div class="layout" data-layout="vilnius">
+
+{% if capabilitySection and capabilitySection.items %}
+{% for item in capabilitySection.items %}
+<div>
+<h3>{{ item.title }}</h3>
+<p>{{ item.text }}</p>
+{% if item.list and item.list.items %}
+<ul>
+{% for listItem in item.list.items %}
+{% if listItem.listItem %}<li>{{ listItem.listItem }}</li>{% endif %}
+{% endfor %}
+</ul>
+{% endif %}
+</div>
+{% endfor %}
+{% endif %}
+
+</div><!-- layout -->
+
+
+
+
+
+<footer role="contentinfo">
+
+<div class="layout" data-layout="madrid">
+
+<div>
+{% if ctaHeadline %}<h3 data-size="m">{{ ctaHeadline }}</h3>{% else %}<h3 data-size="m">Need capable people on a complex programme?</h3>{% endif %}
+<div class="alt-flex">
+{% if ctaText %}<p>{{ ctaText }}</p>{% else %}<p>Tell us what you are trying to deliver</p>{% endif %}
+<a href="/contact" class="btn">{% if ctaButton %}{{ ctaButton }}{% else %}Start a conversation{% endif %}</a>
+</div>
+</div><!-- one -->
+
+<div>
+{% include "partials/footer.html" %}
+</div><!-- two -->
+
+</div><!-- layout -->
+
+</footer>
+
+<script src="{{ site.assetPath }}/js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{
+  "blog": false,
+  "caseStudies": true,
+  "changelog": false,
+  "faqs": true,
+  "navigationMenus": false,
+  "portfolio": false,
+  "services": true,
+  "testimonials": false,
+  "team": true
+}

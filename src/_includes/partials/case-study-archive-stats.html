@@ -1,0 +1,7 @@
+{% if archiveStats and archiveStats.items %}
+{% for stat in archiveStats.items %}
+{% if loop.index0 % 3 == 0 %}<div data-layout="flex">{% endif %}
+<p class="alt-stats">{% if stat.value %}<span class="alt-numeral">{{ stat.value }}</span> {% endif %}{{ stat.label }}</p>
+{% if loop.index0 % 3 == 2 or loop.last %}</div><!-- layout -->{% endif %}
+{% endfor %}
+{% endif %}

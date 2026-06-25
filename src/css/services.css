@@ -1,0 +1,16 @@
+.item-service {
+margin-trim: block; }
+
+.item-service img {
+margin-block-end: var(--spacing-r); }
+
+.item-service > *:last-child {
+margin-block-end: 0; }
+
+.item-service-list {
+margin-block-end: var(--spacing-r);
+margin-trim: block; }
+
+.item-service-list:not(:last-of-type) {
+border-block-end: var(--border-width-l) solid var(--color-border);
+padding-block-end: var(--spacing-r); }

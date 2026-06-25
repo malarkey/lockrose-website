@@ -1,0 +1,32 @@
+---
+pagination:
+  data: collections.caseStudiesCategoryPages
+  size: 1
+  alias: categoryPage
+  addAllPagesToCollections: true
+layout: false
+permalink: "{{ categoryPage.permalink }}"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+{% set caseStudyItems = collections.caseStudiesItems | filterCaseStudiesByCategory(categoryPage.category) %}
+
+<div class="layout" data-layout="amsterdam">
+
+<div>
+<h1>{{ categoryPage.title }}</h1>
+
+<p><a href="/case-studies/">All case studies</a></p>
+
+<div class="layout" data-layout="vienna">
+{% include "partials/case-studies-list.html" %}
+</div><!-- layout -->
+
+</div><!-- one -->
+
+</div><!-- layout -->
+
+{% endblock %}

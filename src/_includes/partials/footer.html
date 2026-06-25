@@ -1,0 +1,13 @@
+<div id="footer-logo">
+<a href="#{{ site.siteID }}" title="Top">{% include "partials/svgs/logo-teal-h.svg" %}<span data-visibility="hidden">{{ site.name }}</span></a>
+</div><!-- footer-logo -->
+
+<ul class="alt-inline">
+{% for item in footer_navigation.items %}
+<li><a href="{{ item.url }}"{{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a></li>
+{% endfor %}
+</ul>
+
+<small id="alt-copyright">&#169; {{ global.currentYear() }}&#8211;now. {{ site.copyrightOwner or site.name }}. All Rights Reserved</small>
+
+<small id="alt-credits"><a href="https://stuffandnonsense.co.uk" title="Website design">Design by Stuff &#38; Nonsense</a></small>

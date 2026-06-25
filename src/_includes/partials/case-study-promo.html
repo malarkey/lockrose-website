@@ -1,0 +1,11 @@
+{% if caseStudyPromo %}
+<div class="alt-promo">
+<small class="alt-meta"><b>Client story:</b> {{ caseStudyPromo.data.title }}</small>
+<h2><a href="{{ caseStudyPromo.url }}">{{ caseStudyPromo.data.lede or caseStudyPromo.data.title }}</a></h2>
+
+<div class="alt-flex">
+{% if caseStudyPromo.data.summary %}<p>{{ caseStudyPromo.data.summary }}</p>{% endif %}
+<a href="{{ caseStudyPromo.url }}" class="btn" data-variant="secondary">Read the client story</a>
+</div>
+</div><!-- alt-promo -->
+{% endif %}

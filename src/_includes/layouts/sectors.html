@@ -1,0 +1,146 @@
+{% set assetHash = global.random() %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "partials/head.html" %}
+
+<body id="{{ site.siteID }}">
+
+{% include "partials/header.html" %}
+
+{% set energyCaseStudies = collections.caseStudiesItems | filterCaseStudiesByCategory("Energy and power") %}
+{% set energyCaseStudyPromo = energyCaseStudies[0] %}
+
+<div class="layout" data-layout="madrid">
+
+<div>
+<h1 data-size="3xl">{{ title }}</h1>
+{% if lede %}{{ lede | markdown | safe }}{% endif %}
+
+<div class="btn-cta">
+<a href="/contact" class="btn">Discuss a project</a>
+<a href="/case-studies/" class="btn" data-variant="secondary">See proof</a>
+</div><!-- btn-cta -->
+</div><!-- one -->
+
+</div><!-- layout -->
+
+
+
+
+
+<hr data-function="spacer">
+
+<div class="layout" data-layout="rome">
+
+<div>
+{% for item in collections.sectorsItems %}
+{% if item.data.slug == "energy-and-power" %}
+<h2 data-size="3xl">{{ item.data.title }}</h2>
+<p>{{ item.data.descripion }}</p>
+{% endif %}
+{% endfor %}
+
+{% set caseStudyPromo = energyCaseStudyPromo %}
+{% if caseStudyPromo %}
+<div class="alt-promo">
+<small class="alt-meta"><b>Client story:</b> {{ caseStudyPromo.data.title }}</small>
+<h2><a href="{{ caseStudyPromo.url }}">{{ caseStudyPromo.data.lede or caseStudyPromo.data.title }}</a></h2>
+
+<div class="btn-cta">
+<a href="{{ caseStudyPromo.url }}" class="btn" data-variant="secondary">Read the client story</a>
+</div>
+</div><!-- alt-promo -->
+{% endif %}
+
+</div><!-- one -->
+
+<div data-layout="grid">
+
+{% for item in collections.sectorsItems %}
+{% if item.data.slug == "energy-and-power" and item.data.details and item.data.details.items %}
+{% for detail in item.data.details.items %}
+<div>
+<h3>{{ detail.itemHeadline }}</h3>
+<p>{{ detail.itemSummary }}</p>
+</div>
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+</div><!-- two -->
+
+</div><!-- layout -->
+
+
+
+
+
+<hr data-function="spacer">
+
+<div class="layout" data-layout="vienna">
+
+{% for item in collections.sectorsItems %}
+{% if item.data.slug != "energy-and-power" %}
+<div>
+<h3>{{ item.data.title }}</h3>
+<p>{{ item.data.descripion }}</p>
+{% if item.data.list and item.data.list.items %}
+<ul>
+{% for listItem in item.data.list.items %}
+{% if listItem.listItem %}<li>{{ listItem.listItem }}</li>{% endif %}
+{% endfor %}
+</ul>
+{% endif %}
+</div>
+{% endif %}
+{% endfor %}
+
+</div><!-- layout -->
+
+
+
+
+
+<hr data-function="spacer">
+
+<div class="layout" data-layout="madrid">
+
+<div>
+{% if familiarProblemsSection %}
+<h2 data-size="2xl">{{ familiarProblemsSection.title }}</h2>
+<p>{{ familiarProblemsSection.text }}</p>
+{% endif %}
+</div><!-- one -->
+
+</div><!-- layout -->
+
+
+
+
+
+<footer role="contentinfo">
+
+<div class="layout" data-layout="madrid">
+
+<div>
+{% if ctaHeadline %}<h3 data-size="m">{{ ctaHeadline }}</h3>{% else %}<h3 data-size="m">Need capable people on a complex programme?</h3>{% endif %}
+<div class="alt-flex">
+{% if ctaText %}<p>{{ ctaText }}</p>{% else %}<p>Tell us what you are trying to deliver</p>{% endif %}
+<a href="/contact" class="btn">{% if ctaButton %}{{ ctaButton }}{% else %}Start a conversation{% endif %}</a>
+</div>
+</div><!-- one -->
+
+<div>
+{% include "partials/footer.html" %}
+</div><!-- two -->
+
+</div><!-- layout -->
+
+</footer>
+
+<script src="{{ site.assetPath }}/js/scripts.js"></script>
+</body>
+
+</html>

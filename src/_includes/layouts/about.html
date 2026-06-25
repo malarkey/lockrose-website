@@ -1,0 +1,162 @@
+{% set assetHash = global.random() %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "partials/head.html" %}
+
+<body id="{{ site.siteID }}">
+
+{% include "partials/header.html" %}
+
+
+
+
+
+<div class="layout" data-layout="madrid">
+
+<div>
+<h1 data-size="3xl">{{ title }}</h1>
+{% if lede %}{{ lede | markdown | safe }}{% endif %}
+
+<div class="btn-cta">
+<a href="/contact" class="btn">Discuss a project</a>
+<a href="/case-studies/" class="btn" data-variant="secondary">See proof</a>
+</div><!-- btn-cta -->
+</div><!-- one -->
+
+<div>
+{% if roleChartSection %}
+<h2>{{ roleChartSection.title }}</h2>
+<p>{{ roleChartSection.text }}</p>
+{% endif %}
+
+<ul class="alt-accreditions">
+<li>{% include "partials/svgs/logo-apm.svg" %}</li>
+<li>{% include "partials/svgs/logo-cyber-essentials.svg" %}</li>
+<li>{% include "partials/svgs/logo-interface.svg" %}</li>
+<li>{% include "partials/svgs/logo-ukas.svg" %}</li>
+</ul>
+
+</div><!-- two -->
+
+</div><!-- layout -->
+
+
+
+
+
+{% set selectedCaseStudyPromos = collections.caseStudiesItems | selectCaseStudies(caseStudyPromos) %}
+
+{% if experienceSection %}
+
+<hr data-function="spacer">
+
+<div class="layout" data-layout="rome">
+<div>
+<h2 data-size="2xl">{{ experienceSection.title }}</h2>
+</div><!-- one -->
+</div><!-- layout -->
+
+<div class="layout" data-layout="vilnius">
+{% for item in experienceSection.items %}
+<div>
+<h3>{{ item.title }}</h3>
+<p>{{ item.text }}</p>
+</div>
+{% endfor %}
+</div><!-- two -->
+{% endif %}
+
+
+
+
+
+<div class="layout" data-layout="amsterdam">
+
+{% if selectedCaseStudyPromos[0] %}
+{% set caseStudyPromo = selectedCaseStudyPromos[0] %}
+{% include "partials/case-study-promo.html" %}
+{% endif %}
+
+</div><!-- layout -->
+
+
+
+
+
+<div class="layout" data-layout="madrid">
+
+<div>
+{% if trustedSection %}
+<h2 data-size="2xl">{{ trustedSection.title }}</h2>
+<p>{{ trustedSection.text }}</p>
+{% endif %}
+</div><!-- one -->
+
+</div><!-- layout -->
+
+
+
+
+
+<div class="layout" data-layout="rome">
+
+{% if comparisonSection and comparisonSection.items %}
+{% for item in comparisonSection.items %}
+<div>
+<h2>{{ item.title }}</h2>
+{% if item.list and item.list.items %}
+<ul>
+{% for listItem in item.list.items %}
+{% if listItem.listItem %}<li>{{ listItem.listItem }}</li>{% endif %}
+{% endfor %}
+</ul>
+{% endif %}
+</div><!-- one -->
+{% endfor %}
+{% endif %}
+
+</div><!-- layout -->
+
+
+
+
+
+<div class="layout" data-layout="amsterdam">
+
+{% if selectedCaseStudyPromos[1] %}
+{% set caseStudyPromo = selectedCaseStudyPromos[1] %}
+{% include "partials/case-study-promo.html" %}
+{% endif %}
+
+</div><!-- layout -->
+
+
+
+
+
+<footer role="contentinfo">
+
+<div class="layout" data-layout="madrid">
+
+<div>
+{% if ctaHeadline %}<h3 data-size="m">{{ ctaHeadline }}</h3>{% else %}<h3 data-size="m">Need capable people on a complex programme?</h3>{% endif %}
+<div class="alt-flex">
+{% if ctaText %}<p>{{ ctaText }}</p>{% else %}<p>Tell us what you are trying to deliver</p>{% endif %}
+<a href="/contact" class="btn">{% if ctaButton %}{{ ctaButton }}{% else %}Start a conversation{% endif %}</a>
+</div>
+</div><!-- one -->
+
+<div>
+{% include "partials/footer.html" %}
+</div><!-- two -->
+
+</div><!-- layout -->
+
+</footer>
+
+<script src="{{ site.assetPath }}/js/scripts.js"></script>
+</body>
+
+</html>

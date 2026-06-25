@@ -1,0 +1,56 @@
+<head>
+
+<script>
+(() => {
+const identityTokens = ["invite_token", "recovery_token", "confirmation_token", "email_change_token"];
+const { hash, pathname } = window.location;
+
+if (hash && !pathname.startsWith("/admin/") && pathname !== "/admin" && identityTokens.some((token) => hash.includes(token))) {
+window.location.replace(`/admin/${hash}`);
+}
+})();
+</script>
+
+{% include "partials/meta.html" %}
+{% include "partials/json-ld.html" %}
+
+<meta name="theme-color" content="[INSERT]">
+<meta name="robots" content="index, follow, noodp" />
+
+{% if features.caseStudies %}
+<link rel="alternate" type="application/rss+xml" href="{{ site.assetPath }}/feed.xml" />
+{% endif %}
+<link rel="stylesheet" href="{{ site.assetPath }}/css/critical.css">
+{% if features.blog %}
+<link rel="stylesheet" href="{{ site.assetPath }}/css/blog.css">
+{% endif %}
+{% if features.caseStudies %}
+<link rel="stylesheet" href="{{ site.assetPath }}/css/case-studies.css">
+{% endif %}
+{% if features.changelog %}
+<link rel="stylesheet" href="{{ site.assetPath }}/css/changelog.css">
+{% endif %}
+{% if features.faqs %}
+<link rel="stylesheet" href="{{ site.assetPath }}/css/faqs.css">
+{% endif %}
+{% if features.navigationMenus %}
+<link rel="stylesheet" href="{{ site.assetPath }}/css/navigation-menus.css">
+{% endif %}
+{% if features.portfolio %}
+<link rel="stylesheet" href="{{ site.assetPath }}/css/portfolio.css">
+{% endif %}
+{% if features.services %}
+<link rel="stylesheet" href="{{ site.assetPath }}/css/services.css">
+{% endif %}
+{% if features.testimonials %}
+<link rel="stylesheet" href="{{ site.assetPath }}/css/testimonials.css">
+{% endif %}
+{% if features.team %}
+<link rel="stylesheet" href="{{ site.assetPath }}/css/team.css">
+{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+</head>

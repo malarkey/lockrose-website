@@ -1,0 +1,63 @@
+pagesFiles:
+  - label: "Case studies"
+    name: "case_studies"
+    file: "src/case-studies.md"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/case-studies.html" }
+      - { label: "Permalink", name: "permalink", widget: "hidden", default: "/case-studies/" }
+      - { label: "Title", name: "title", widget: "string", default: "Case studies" }
+      - { label: "Meta description", name: "metaDesc", widget: "text", required: false }
+      - { label: "Lede", name: "lede", widget: "markdown", required: false }
+collections:
+  - name: "case_studies"
+    label: "Case studies"
+    folder: "src/case-studies"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "case-studies/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Client name", name: "clientName", widget: "string" }
+      - { label: "Client logo", name: "clientLogo", widget: "image", required: false, media_folder: "src/images/case-studies", public_folder: "/images/case-studies" }
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        required: false
+        field: { label: "Category", name: "category", widget: "string" }
+      - { label: "Image", name: "image", widget: "image", required: false, media_folder: "src/images/case-studies", public_folder: "/images/case-studies" }
+      - { label: "Thumbnail image", name: "thumbnail", widget: "image", required: false, media_folder: "src/images/case-studies", public_folder: "/images/case-studies" }
+      - { label: "Lede", name: "lede", widget: "text" }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Meta description", name: "metaDesc", widget: "text", required: false }
+      - { label: "Result", name: "result", widget: "markdown", required: false }
+      - label: "What changed"
+        name: "whatChanged"
+        widget: "object"
+        required: false
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "List item", name: "listItem", widget: "string" }
+      - label: "Summary section"
+        name: "summarySection"
+        widget: "object"
+        required: false
+        fields:
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            required: false
+            summary: "{{fields.summaryTitle}}"
+            fields:
+              - { label: "Summary title", name: "summaryTitle", widget: "string" }
+              - { label: "Summary text", name: "summaryText", widget: "text" }
+      - { label: "Quotation", name: "quotation", widget: "text", required: false }
+      - { label: "Order", name: "order", widget: "number", value_type: "int", min: 1, required: false }
+      - { label: "Featured", name: "featured", widget: "boolean", required: false, default: false }
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+      - { label: "Year", name: "year", widget: "number", value_type: "int", required: false }
+      - { label: "Project URL", name: "projectUrl", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }

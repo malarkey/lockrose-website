@@ -1,0 +1,204 @@
+{% set assetHash = global.random() %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "partials/head.html" %}
+
+<body id="{{ site.siteID }}">
+
+{% include "partials/header.html" %}
+
+
+
+
+
+<div class="layout" data-layout="rome">
+
+<div>
+{% if featureImage %}
+<figure>
+<img src="{{ featureImage }}" alt="{{ featureImageCaption }}" />
+{% if featureImageCaption %}
+<figcaption>{{ featureImageCaption }}</figcaption>
+{% endif %}
+</figure>
+{% endif %}
+</div><!-- one -->
+
+<div>
+<h1 data-size="3xl" data-visibility="hidden">{{ title }}</h1>
+{% if lede %}{{ lede | markdown | safe }}{% endif %}
+
+{% if aside %}{{ aside | markdown | safe }}{% endif %}
+
+<div class="btn-cta">
+<a href="/contact" class="btn">Discuss a project</a>
+<a href="/case-studies/" class="btn" data-variant="secondary">See proof</a>
+</div><!-- btn-cta -->
+
+</div><!-- two -->
+
+</div><!-- layout -->
+
+
+
+
+
+{% set selectedCaseStudyPromos = collections.caseStudiesItems | selectCaseStudies(caseStudyPromos) %}
+
+{% if homeStats %}
+<hr data-function="spacer">
+
+<div class="layout" data-layout="vilnius">
+
+<div>
+<h2>{{ homeStats.title }}</h2>
+<p>{{ homeStats.text }}</p>
+</div><!-- one -->
+
+{% for item in homeStats.items %}
+<div class="alt-stats"><p><span class="alt-numeral">{{ item.value }}</span> {{ item.label }}</p></div><!-- alt-stats -->
+{% endfor %}
+
+</div><!-- layout -->
+{% endif %}
+
+
+
+
+
+{% if experienceSection %}
+<hr data-function="spacer">
+
+<div id="section-experience" class="layout" data-layout="paris">
+
+<div>
+<h2 data-size="2xl">{{ experienceSection.title }}</h2>
+<p>{{ experienceSection.text }}</p>
+</div><!-- one -->
+
+<div data-layout="grid">
+{% for item in experienceSection.items %}
+<div>
+<h3>{{ item.title }}</h3>
+<p>{{ item.text }}</p>
+</div>
+{% endfor %}
+</div><!-- two -->
+
+</div><!-- layout -->
+{% endif %}
+
+
+
+
+
+<div class="layout" data-layout="amsterdam">
+
+{% if selectedCaseStudyPromos[0] %}
+{% set caseStudyPromo = selectedCaseStudyPromos[0] %}
+{% include "partials/case-study-promo.html" %}
+{% endif %}
+
+</div><!-- layout -->
+
+
+
+
+
+<div id="section-services" class="layout" data-layout="paris">
+
+<div>
+{% if servicesSection %}
+<h2 data-size="2xl">{{ servicesSection.title }}</h2>
+<p class="alt-lede">{{ servicesSection.lede }}</p>
+<p>{{ servicesSection.text }}</p>
+{% endif %}
+</div><!-- one -->
+
+
+<div data-layout="grid">
+{% for item in collections.servicesItems %}
+<div>
+<h3>{{ item.data.title }}</h3>
+{% if item.data.summary %}<p>{{ item.data.summary }}</p>{% endif %}
+</div>
+{% endfor %}
+</div><!-- two -->
+
+</div><!-- layout -->
+
+
+
+
+
+{% if energyExperienceSection %}
+<hr data-function="spacer">
+
+<div class="layout" data-layout="stockholm">
+
+<div>
+<h2 data-size="2xl">{{ energyExperienceSection.title }}</h2>
+<p>{{ energyExperienceSection.text }}</p>
+</div><!-- one -->
+
+</div><!-- layout -->
+{% endif %}
+
+
+
+
+
+<hr data-function="spacer">
+
+<div id="section-sectors" class="layout" data-layout="vilnius">
+
+{% for item in collections.sectorsItems %}<div>
+<h3>{{ item.data.title }}</h3>
+{% if item.data.summary %}<p>{{ item.data.summary }}</p>{% endif %}
+</div>{% endfor %}
+
+</div><!-- layout -->
+
+
+
+
+
+<div class="layout" data-layout="amsterdam">
+
+{% if selectedCaseStudyPromos[1] %}
+{% set caseStudyPromo = selectedCaseStudyPromos[1] %}
+{% include "partials/case-study-promo.html" %}
+{% endif %}
+
+</div><!-- layout -->
+
+
+
+
+
+<footer role="contentinfo">
+
+<div class="layout" data-layout="madrid">
+
+<div>
+{% if ctaHeadline %}<h3 data-size="m">{{ ctaHeadline }}</h3>{% else %}<h3 data-size="m">Need capable people on a complex programme?</h3>{% endif %}
+<div class="alt-flex">
+{% if ctaText %}<p>{{ ctaText }}</p>{% else %}<p>Tell us what you are trying to deliver</p>{% endif %}
+<a href="/contact" class="btn">{% if ctaButton %}{{ ctaButton }}{% else %}Start a conversation{% endif %}</a>
+</div>
+</div><!-- one -->
+
+<div>
+{% include "partials/footer.html" %}
+</div><!-- two -->
+
+</div><!-- layout -->
+
+</footer>
+
+<script src="{{ site.assetPath }}/js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/sector.html",
+  "permalink": "/sectors/{{ slug or page.fileSlug }}/index.html"
+}

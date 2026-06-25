@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "text": "Careers",
+      "url": "/careers/"
+    },
+    {
+      "text": "Privacy",
+      "url": "/privacy/"
+    },
+    {
+      "text": "Terms and conditions",
+      "url": "/terms/"
+    },
+    {
+      "text": "Contact",
+      "url": "/contact/"
+    }
+  ]
+}

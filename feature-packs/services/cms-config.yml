@@ -1,0 +1,31 @@
+pagesFiles:
+  - label: "Services"
+    name: "services"
+    file: "src/services.md"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/services.html" }
+      - { label: "Permalink", name: "permalink", widget: "hidden", default: "/services/" }
+      - { label: "Title", name: "title", widget: "string", default: "Services" }
+      - { label: "Meta description", name: "metaDesc", widget: "text", required: false }
+      - { label: "Lede", name: "lede", widget: "markdown", required: false }
+collections:
+  - name: "services"
+    label: "Services"
+    folder: "src/services"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "services/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Lede", name: "lede", widget: "text" }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Meta description", name: "metaDesc", widget: "text", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false, media_folder: "src/images/services", public_folder: "/images/services" }
+      - { label: "Thumbnail image", name: "thumbnail", widget: "image", required: false, media_folder: "src/images/services", public_folder: "/images/services" }
+      - { label: "Quotation", name: "quotation", widget: "text", required: false }
+      - { label: "Order", name: "order", widget: "number", value_type: "int", min: 1, required: false }
+      - { label: "Featured", name: "featured", widget: "boolean", required: false, default: false }
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+      - { label: "CTA text", name: "ctaText", widget: "string", required: false }
+      - { label: "CTA URL", name: "ctaUrl", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }

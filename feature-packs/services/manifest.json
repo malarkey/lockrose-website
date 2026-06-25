@@ -1,0 +1,16 @@
+{
+  "featureFlag": "services",
+  "mainNavigationItems": [
+    {
+      "text": "Services",
+      "url": "/services/"
+    }
+  ],
+  "footerNavigationItems": [
+    {
+      "text": "Services",
+      "url": "/services/"
+    }
+  ],
+  "cms": true
+}

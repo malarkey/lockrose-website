@@ -1,0 +1,10 @@
+{% set listedSectors = sectorItems or collections.sectorsItems %}
+
+{% for item in listedSectors %}
+{% if item.url != page.url %}
+<article class="item-service-list">
+<h3><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+{% if item.data.summary %}<p>{{ item.data.summary }}</p>{% endif %}
+</article>
+{% endif %}
+{% endfor %}

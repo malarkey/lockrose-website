@@ -1,0 +1,46 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<div class="layout" data-layout="athens">
+
+<div>
+<h1>{{ title }}</h1>
+
+{% if summary %}<p>{{ summary }}</p>{% endif %}
+{% if descripion %}<p>{{ descripion }}</p>{% endif %}
+
+{{ content | safe }}
+
+{% if details.items %}
+{% for item in details.items %}
+<h3>{{ item.itemHeadline }}</h3>
+<p>{{ item.itemSummary }}</p>
+{% endfor %}
+{% endif %}
+
+{% if list.items %}
+<ul>
+{% for item in list.items %}
+{% if item.listItem %}<li>{{ item.listItem }}</li>{% endif %}
+{% endfor %}
+</ul>
+{% endif %}
+</div><!-- one -->
+
+<div>
+<h3>More sectors</h3>
+
+{% set otherSectors = helpers.getSiblingContent(collections.sectorsItems, page, 2, false) %}
+{% for item in otherSectors %}
+<article class="item-service-list">
+<h3><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+{% if item.data.summary %}<p>{{ item.data.summary }}</p>{% endif %}
+</article>
+{% endfor %}
+
+</div><!-- two -->
+
+</div><!-- layout -->
+
+{% endblock %}

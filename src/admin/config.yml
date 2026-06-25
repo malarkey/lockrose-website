@@ -1,0 +1,1099 @@
+backend:
+  name: git-gateway
+  branch: main
+publish_mode: editorial_workflow
+media_folder: src/images
+public_folder: /images
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - label: Homepage
+        name: home
+        file: src/index.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: layouts/home.html
+          - label: Title
+            name: title
+            widget: string
+          - label: Meta description
+            name: metaDesc
+            widget: text
+            required: false
+          - label: Feature image
+            name: featureImage
+            widget: image
+            required: false
+          - label: Feature image caption
+            name: featureImageCaption
+            widget: string
+            required: false
+          - label: Intro
+            name: lede
+            widget: markdown
+            required: false
+          - label: Sidebar
+            name: aside
+            widget: markdown
+            required: false
+          - label: National Grid panel
+            name: homeStats
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+              - label: Stats
+                name: items
+                widget: list
+                summary: "{{fields.value}} {{fields.label}}"
+                fields:
+                  - label: Value
+                    name: value
+                    widget: string
+                  - label: Label
+                    name: label
+                    widget: string
+          - label: Experience section
+            name: experienceSection
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+              - label: Items
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Text
+                    name: text
+                    widget: text
+          - label: Services section
+            name: servicesSection
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Lede
+                name: lede
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+          - label: Energy experience section
+            name: energyExperienceSection
+            widget: object
+            required: false
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+          - label: Case study promos
+            name: caseStudyPromos
+            widget: list
+            required: false
+            field:
+              label: Case study
+              name: caseStudyPromo
+              widget: relation
+              collection: case_studies
+              search_fields:
+                - title
+                - clientName
+                - slug
+              display_fields:
+                - title
+              value_field: '{{slug}}'
+          - label: Trusted section
+            name: trustedSection
+            widget: object
+            required: false
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+          - label: Comparison section
+            name: comparisonSection
+            widget: object
+            required: false
+            fields:
+              - label: Items
+                name: items
+                widget: list
+                required: false
+                summary: "{{fields.title}}"
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: List items
+                    name: list
+                    widget: object
+                    required: false
+                    fields:
+                      - label: Items
+                        name: items
+                        widget: list
+                        required: false
+                        fields:
+                          - label: List item
+                            name: listItem
+                            widget: string
+                            required: false
+          - label: CTA headline
+            name: ctaHeadline
+            widget: string
+            required: false
+          - label: CTA text
+            name: ctaText
+            widget: text
+            required: false
+          - label: CTA button
+            name: ctaButton
+            widget: string
+            required: false
+          - label: Body
+            name: body
+            widget: markdown
+            required: false
+      - label: About
+        name: about
+        file: src/about.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: layouts/about.html
+          - label: Permalink
+            name: permalink
+            widget: hidden
+            default: /about/
+          - label: Title
+            name: title
+            widget: string
+          - label: Meta description
+            name: metaDesc
+            widget: text
+            required: false
+          - label: Feature image
+            name: featureImage
+            widget: image
+            required: false
+          - label: Feature image caption
+            name: featureImageCaption
+            widget: string
+            required: false
+          - label: Intro
+            name: lede
+            widget: markdown
+            required: false
+          - label: Sidebar
+            name: aside
+            widget: markdown
+            required: false
+          - label: Role chart section
+            name: roleChartSection
+            widget: object
+            required: false
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+          - label: Experience section
+            name: experienceSection
+            widget: object
+            required: false
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Items
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Text
+                    name: text
+                    widget: text
+          - label: Case study promos
+            name: caseStudyPromos
+            widget: list
+            required: false
+            field:
+              label: Case study
+              name: caseStudyPromo
+              widget: relation
+              collection: case_studies
+              search_fields:
+                - title
+                - clientName
+                - slug
+              display_fields:
+                - title
+              value_field: '{{slug}}'
+          - label: CTA headline
+            name: ctaHeadline
+            widget: string
+            required: false
+          - label: CTA text
+            name: ctaText
+            widget: text
+            required: false
+          - label: CTA button
+            name: ctaButton
+            widget: string
+            required: false
+          - label: Body
+            name: body
+            widget: markdown
+            required: false
+      - label: Contact
+        name: contact
+        file: src/contact.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: layouts/contact.html
+          - label: Permalink
+            name: permalink
+            widget: hidden
+            default: /contact/
+          - label: Title
+            name: title
+            widget: string
+          - label: Meta description
+            name: metaDesc
+            widget: text
+            required: false
+          - label: Feature image
+            name: featureImage
+            widget: image
+            required: false
+          - label: Feature image caption
+            name: featureImageCaption
+            widget: string
+            required: false
+          - label: Intro
+            name: lede
+            widget: markdown
+            required: false
+          - label: Sidebar
+            name: aside
+            widget: markdown
+            required: false
+          - label: Body
+            name: body
+            widget: markdown
+            required: false
+      - label: Privacy policy
+        name: privacy
+        file: src/privacy.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: layouts/page.html
+          - label: Permalink
+            name: permalink
+            widget: hidden
+            default: /privacy/
+          - label: Title
+            name: title
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
+      - label: Terms
+        name: terms
+        file: src/terms.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: layouts/page.html
+          - label: Permalink
+            name: permalink
+            widget: hidden
+            default: /terms/
+          - label: Title
+            name: title
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
+      - label: Case studies
+        name: case_studies
+        file: src/case-studies.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: layouts/case-studies.html
+          - label: Permalink
+            name: permalink
+            widget: hidden
+            default: /case-studies/
+          - label: Title
+            name: title
+            widget: string
+            default: Case studies
+          - label: Meta description
+            name: metaDesc
+            widget: text
+            required: false
+          - label: Lede
+            name: lede
+            widget: markdown
+            required: false
+          - label: Archive intro section
+            name: archiveIntroSection
+            widget: object
+            required: false
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+              - label: Button text
+                name: buttonText
+                widget: string
+              - label: Button URL
+                name: buttonUrl
+                widget: string
+          - label: Archive subscribe section
+            name: archiveSubscribeSection
+            widget: object
+            required: false
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+              - label: Button text
+                name: buttonText
+                widget: string
+              - label: Button URL
+                name: buttonUrl
+                widget: string
+      - label: FAQs
+        name: faqs
+        file: src/faqs.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: layouts/faqs.html
+          - label: Permalink
+            name: permalink
+            widget: hidden
+            default: /faqs/
+          - label: Title
+            name: title
+            widget: string
+            default: Frequently asked questions
+          - label: Meta description
+            name: metaDesc
+            widget: text
+            required: false
+          - label: Lede
+            name: lede
+            widget: markdown
+            required: false
+      - label: Services
+        name: services
+        file: src/services.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: layouts/services.html
+          - label: Permalink
+            name: permalink
+            widget: hidden
+            default: /services/
+          - label: Title
+            name: title
+            widget: string
+            default: Services
+          - label: Meta description
+            name: metaDesc
+            widget: text
+            required: false
+          - label: Lede
+            name: lede
+            widget: markdown
+            required: false
+          - label: Options
+            name: options
+            widget: object
+            required: false
+            fields:
+              - label: Items
+                name: items
+                widget: list
+                required: false
+                summary: "{{fields.itemHeadline}}"
+                fields:
+                  - label: Headline
+                    name: itemHeadline
+                    widget: string
+                  - label: Summary
+                    name: itemSummary
+                    widget: text
+          - label: Support section
+            name: supportSection
+            widget: object
+            required: false
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+          - label: Capability section
+            name: capabilitySection
+            widget: object
+            required: false
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+              - label: Items
+                name: items
+                widget: list
+                required: false
+                summary: "{{fields.title}}"
+                fields:
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Text
+                    name: text
+                    widget: text
+                  - label: List items
+                    name: list
+                    widget: object
+                    required: false
+                    fields:
+                      - label: Items
+                        name: items
+                        widget: list
+                        required: false
+                        fields:
+                          - label: List item
+                            name: listItem
+                            widget: string
+                            required: false
+          - label: CTA headline
+            name: ctaHeadline
+            widget: string
+            required: false
+          - label: CTA text
+            name: ctaText
+            widget: text
+            required: false
+          - label: CTA button
+            name: ctaButton
+            widget: string
+            required: false
+          - label: Body
+            name: body
+            widget: markdown
+            required: false
+      - label: Sectors
+        name: sectors
+        file: src/sectors.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: layouts/sectors.html
+          - label: Permalink
+            name: permalink
+            widget: hidden
+            default: /sectors/
+          - label: Title
+            name: title
+            widget: string
+            default: Sectors
+          - label: Meta description
+            name: metaDesc
+            widget: text
+            required: false
+          - label: Lede
+            name: lede
+            widget: markdown
+            required: false
+          - label: Familiar problems section
+            name: familiarProblemsSection
+            widget: object
+            required: false
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+          - label: CTA headline
+            name: ctaHeadline
+            widget: string
+            required: false
+          - label: CTA text
+            name: ctaText
+            widget: text
+            required: false
+          - label: CTA button
+            name: ctaButton
+            widget: string
+            required: false
+      - label: Team index
+        name: team
+        file: src/team.md
+        fields:
+          - label: Layout
+            name: layout
+            widget: hidden
+            default: layouts/team.html
+          - label: Permalink
+            name: permalink
+            widget: hidden
+            default: /team/
+          - label: Title
+            name: title
+            widget: string
+  - name: globals
+    label: Globals
+    files:
+      - label: Site data
+        name: site_data
+        file: src/_data/site-content.json
+        fields:
+          - label: Site name
+            name: name
+            widget: string
+            required: false
+          - label: Site URL
+            name: url
+            widget: string
+            required: false
+          - label: Address line 1
+            name: address1
+            widget: string
+            required: false
+          - label: Address line 2
+            name: address2
+            widget: string
+            required: false
+          - label: Town/city
+            name: townCity
+            widget: string
+            required: false
+          - label: County/state
+            name: countyState
+            widget: string
+            required: false
+          - label: Postal/ZIP code
+            name: postalZipCode
+            widget: string
+            required: false
+          - label: Country
+            name: country
+            widget: string
+            required: false
+          - label: Copyright owner
+            name: copyrightOwner
+            widget: string
+            required: false
+          - label: Email
+            name: email
+            widget: string
+            required: false
+          - label: Telephone
+            name: telephone
+            widget: string
+            required: false
+          - label: Bluesky
+            name: bluesky
+            widget: string
+            required: false
+          - label: Facebook
+            name: facebook
+            widget: string
+            required: false
+          - label: IMDb
+            name: imdb
+            widget: string
+            required: false
+          - label: Instagram
+            name: instagram
+            widget: string
+            required: false
+          - label: LinkedIn
+            name: linkedin
+            widget: string
+            required: false
+          - label: Threads
+            name: threads
+            widget: string
+            required: false
+          - label: TikTok
+            name: tiktok
+            widget: string
+            required: false
+          - label: YouTube
+            name: youtube
+            widget: string
+            required: false
+      - label: Main navigation
+        name: navigation
+        file: src/_data/navigation.json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            fields:
+              - label: Text
+                name: text
+                widget: string
+              - label: URL
+                name: url
+                widget: string
+      - label: Footer navigation
+        name: footer_navigation
+        file: src/_data/footer_navigation.json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            fields:
+              - label: Text
+                name: text
+                widget: string
+              - label: URL
+                name: url
+                widget: string
+  - name: case_studies
+    label: Case studies
+    folder: src/case-studies
+    create: true
+    slug: '{{slug}}'
+    preview_path: case-studies/{{slug}}
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Client name
+        name: clientName
+        widget: string
+      - label: Client logo
+        name: clientLogo
+        widget: image
+        required: false
+        media_folder: src/images/case-studies
+        public_folder: /images/case-studies
+      - label: Categories
+        name: categories
+        widget: list
+        required: false
+        field:
+          label: Category
+          name: category
+          widget: string
+      - label: Image
+        name: image
+        widget: image
+        required: false
+        media_folder: src/images/case-studies
+        public_folder: /images/case-studies
+      - label: Thumbnail image
+        name: thumbnail
+        widget: image
+        required: false
+        media_folder: src/images/case-studies
+        public_folder: /images/case-studies
+      - label: Lede
+        name: lede
+        widget: text
+      - label: Summary
+        name: summary
+        widget: text
+        required: false
+      - label: Meta description
+        name: metaDesc
+        widget: text
+        required: false
+      - label: Result
+        name: result
+        widget: markdown
+        required: false
+      - label: What changed
+        name: whatChanged
+        widget: object
+        required: false
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            required: false
+            fields:
+              - label: List item
+                name: listItem
+                widget: string
+      - label: Summary section
+        name: summarySection
+        widget: object
+        required: false
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            required: false
+            summary: "{{fields.summaryTitle}}"
+            fields:
+              - label: Summary title
+                name: summaryTitle
+                widget: string
+              - label: Summary text
+                name: summaryText
+                widget: text
+      - label: Archive stats
+        name: archiveStats
+        widget: object
+        required: false
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            required: false
+            summary: "{{fields.value}} {{fields.label}}"
+            fields:
+              - label: Value
+                name: value
+                widget: string
+                required: false
+              - label: Label
+                name: label
+                widget: string
+      - label: Quotation
+        name: quotation
+        widget: text
+        required: false
+      - label: Order
+        name: order
+        widget: number
+        value_type: int
+        min: 1
+        required: false
+      - label: Featured
+        name: featured
+        widget: boolean
+        required: false
+        default: false
+      - label: Slug
+        name: slug
+        widget: string
+        required: false
+      - label: Year
+        name: year
+        widget: number
+        value_type: int
+        required: false
+      - label: Project URL
+        name: projectUrl
+        widget: string
+        required: false
+      - label: Body
+        name: body
+        widget: markdown
+        required: false
+  - name: faqs
+    label: FAQs
+    folder: src/faqs
+    create: true
+    slug: '{{slug}}'
+    preview_path: faqs
+    fields:
+      - label: Question
+        name: question
+        widget: string
+      - label: Answer
+        name: answer
+        widget: markdown
+      - label: Category
+        name: category
+        widget: string
+      - label: Featured
+        name: featured
+        widget: boolean
+        required: false
+        default: false
+      - label: Order
+        name: order
+        widget: number
+        value_type: int
+        min: 1
+  - name: services
+    label: Services
+    folder: src/services
+    create: true
+    slug: '{{slug}}'
+    preview_path: services/{{slug}}
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Lede
+        name: lede
+        widget: text
+      - label: Summary
+        name: summary
+        widget: text
+        required: false
+      - label: Description
+        name: descripion
+        widget: text
+        required: false
+      - label: Outcome
+        name: outcome
+        widget: text
+        required: false
+      - label: List items
+        name: list
+        widget: object
+        required: false
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            required: false
+            fields:
+              - label: List item
+                name: listItem
+                widget: string
+                required: false
+      - label: Meta description
+        name: metaDesc
+        widget: text
+        required: false
+      - label: Image
+        name: image
+        widget: image
+        required: false
+        media_folder: src/images/services
+        public_folder: /images/services
+      - label: Thumbnail image
+        name: thumbnail
+        widget: image
+        required: false
+        media_folder: src/images/services
+        public_folder: /images/services
+      - label: Quotation
+        name: quotation
+        widget: text
+        required: false
+      - label: Order
+        name: order
+        widget: number
+        value_type: int
+        min: 1
+        required: false
+      - label: Featured
+        name: featured
+        widget: boolean
+        required: false
+        default: false
+      - label: Slug
+        name: slug
+        widget: string
+        required: false
+      - label: CTA text
+        name: ctaText
+        widget: string
+        required: false
+      - label: CTA URL
+        name: ctaUrl
+        widget: string
+        required: false
+      - label: Body
+        name: body
+        widget: markdown
+        required: false
+  - name: sectors
+    label: Sectors
+    folder: src/sectors
+    create: true
+    slug: '{{slug}}'
+    preview_path: sectors/{{slug}}
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Summary
+        name: summary
+        widget: text
+        required: false
+      - label: Meta description
+        name: metaDesc
+        widget: text
+        required: false
+      - label: Description
+        name: descripion
+        widget: text
+        required: false
+      - label: List items
+        name: list
+        widget: object
+        required: false
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            required: false
+            fields:
+              - label: List item
+                name: listItem
+                widget: string
+                required: false
+      - label: Image
+        name: image
+        widget: image
+        required: false
+        media_folder: src/images/sectors
+        public_folder: /images/sectors
+      - label: Thumbnail image
+        name: thumbnail
+        widget: image
+        required: false
+        media_folder: src/images/sectors
+        public_folder: /images/sectors
+      - label: Quotation
+        name: quotation
+        widget: text
+        required: false
+      - label: Featured
+        name: featured
+        widget: boolean
+        required: false
+        default: false
+      - label: Order
+        name: order
+        widget: number
+        value_type: int
+        min: 1
+        required: false
+      - label: Slug
+        name: slug
+        widget: string
+        required: false
+      - label: CTA text
+        name: ctaText
+        widget: string
+        required: false
+      - label: CTA URL
+        name: ctaUrl
+        widget: string
+        required: false
+      - label: Details
+        name: details
+        widget: object
+        required: false
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            required: false
+            fields:
+              - label: Headline
+                name: itemHeadline
+                widget: string
+              - label: Summary
+                name: itemSummary
+                widget: text
+      - label: Body
+        name: body
+        widget: markdown
+        required: false
+  - name: team
+    label: Team members
+    folder: src/team
+    create: true
+    slug: '{{slug}}'
+    preview_path: team/{{slug}}
+    fields:
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: layouts/member.html
+      - label: Name
+        name: name
+        widget: string
+      - label: Role
+        name: role
+        widget: string
+        required: false
+      - label: Qualifications
+        name: qualifications
+        widget: string
+        required: false
+      - label: Location
+        name: location
+        widget: string
+        required: false
+      - label: Email
+        name: email
+        widget: string
+        required: false
+      - label: Website
+        name: url
+        widget: string
+        required: false
+      - label: LinkedIn
+        name: linkedin
+        widget: string
+        required: false
+      - label: Image
+        name: image
+        widget: image
+        required: false
+        media_folder: src/images/team
+        public_folder: /images/team
+      - label: Summary
+        name: summary
+        widget: text
+        required: false

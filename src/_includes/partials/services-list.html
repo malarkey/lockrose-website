@@ -1,0 +1,19 @@
+{% set listedServices = serviceItems or collections.servicesItems %}
+
+{% for item in listedServices %}
+{% if item.url != page.url %}
+<article class="item-service">
+{% if item.data.thumbnail %}
+<a href="{{ item.url }}"><img src="{{ item.data.thumbnail }}" alt="{{ item.data.title }}"></a>
+{% endif %}
+
+<h3><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+
+{% if item.data.lede %}<p>{{ item.data.lede }}</p>{% endif %}
+
+{% if item.data.ctaText and item.data.ctaUrl %}
+<p data-size="s"><a href="{{ item.data.ctaUrl }}">{{ item.data.ctaText }}</a></p>
+{% endif %}
+</article>
+{% endif %}
+{% endfor %}

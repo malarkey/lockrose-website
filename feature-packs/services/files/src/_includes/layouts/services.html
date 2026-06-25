@@ -1,0 +1,20 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<div class="layout" data-layout="amsterdam">
+
+<div>
+<h1>{{ title }}</h1>
+{% if lede %}{{ lede | markdown | safe }}{% endif %}
+</div><!-- one -->
+
+</div><!-- layout -->
+
+<div class="layout" data-layout="vienna">
+{% include "partials/services-list.html" %}
+</div><!-- layout -->
+
+</div><!-- one -->
+
+{% endblock %}
