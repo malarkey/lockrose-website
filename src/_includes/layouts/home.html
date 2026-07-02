@@ -100,15 +100,6 @@
 
 
 
-
-<figure>
-<img src="/images/placeholder-case-study-1.webp" alt="">
-</figure>
-
-
-
-
-
 <div id="section-services" class="layout" data-layout="paris">
 
 <div>
@@ -120,14 +111,54 @@
 </div><!-- one -->
 
 
-<div data-layout="grid" data-variation="dividers">
-{% for item in collections.servicesItems %}
 <div>
-<h3>{{ item.data.title }}</h3>
-{% if item.data.summary %}<p>{{ item.data.summary }}</p>{% endif %}
+</div><!-- two -->
+
+</div><!-- layout -->
+
+
+
+<div class="layout" data-layout="amsterdam">
+
+<div class="services-tabs" data-services-tabs>
+
+<div class="services-tabs-media">
+{% for item in collections.servicesItems %}
+<div class="services-tabs-media-panel" id="services-media-panel-{{ loop.index }}" {% if not loop.first %}hidden{% endif %}>
+{% if item.data.image %}<img src="{{ item.data.image }}" alt="{{ item.data.title }}">
+{% else %}
+<div class="services-tabs-media-placeholder" aria-hidden="true"></div>{% endif %}
 </div>
 {% endfor %}
-</div><!-- two -->
+</div><!-- services-tabs-media -->
+
+<div class="services-tabs-list" aria-label="Service stages" role="tablist">
+{% for item in collections.servicesItems %}
+<button aria-controls="services-panel-{{ loop.index }}" aria-selected="{% if loop.first %}true{% else %}false{% endif %}" class="services-tabs-button" id="services-tab-{{ loop.index }}" role="tab" tabindex="{% if loop.first %}0{% else %}-1{% endif %}" type="button">{{ item.data.title }}</button>
+{% endfor %}
+</div><!-- services-tabs-list -->
+
+{% for item in collections.servicesItems %}
+<section aria-labelledby="services-tab-{{ loop.index }}" class="services-tabs-panel" id="services-panel-{{ loop.index }}" role="tabpanel" {% if not loop.first %}hidden{% endif %}>
+<div class="services-tabs-content">
+<div class="services-tabs-copy">
+<h3 data-visibility="hidden">{{ item.data.title }}</h3>
+{% if item.data.description %}<p class="alt-lede">{{ item.data.description }}</p>{% endif %}
+{% if item.data.outcome %}<p><b class="alt-uppercase">Outcome:</b> {{ item.data.outcome }}</p>{% endif %}
+</div>
+
+<div class="services-tabs-listing">
+{% if item.data.list and item.data.list.items %}<ul>
+{% for listItem in item.data.list.items %}
+{% if listItem.listItem %}<li>{{ listItem.listItem }}</li>{% endif %}
+{% endfor %}</ul>
+{% endif %}
+</div>
+</div><!-- services-tabs-content -->
+</section>
+{% endfor %}
+
+</div><!-- services-tabs -->
 
 </div><!-- layout -->
 
