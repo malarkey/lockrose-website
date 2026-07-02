@@ -72,7 +72,7 @@
 <div>
 <h3>{{ item.title }}</h3>
 <p>{{ item.text }}</p>
-{% if item.list and item.list.items %}<ul>
+{% if item.list and item.list.items %}<ul class="spacing-s">
 {% for listItem in item.list.items %}
 {% if listItem.listItem %}<li>{{ listItem.listItem }}</li>{% endif %}
 {% endfor %}</ul>
@@ -123,6 +123,31 @@
 
 <div class="layout" data-layout="amsterdam">
 
+<div>
+
+<!-- UI FOR SMALL SCREENS ONLY -->
+
+<div data-visibility="small">
+
+<h3>{{ lockroseWay.title }}</h3>
+
+<ul class="alt-comparison-list" data-visibility="small">
+{% for rowIndex in range(0, rowCount) %}
+{% set usualItem = usualItems[rowIndex] if usualItems[rowIndex] and usualItems[rowIndex].listItem else false %}
+{% set lockroseItem = lockroseItems[rowIndex] if lockroseItems[rowIndex] and lockroseItems[rowIndex].listItem else false %}
+<li>
+{% if usualItem %}<p><b>{{ usualItem.listItem }}</b></p>{% endif %}
+{% if lockroseItem %}<p>&#9206; {{ lockroseItem.listItem }}</p>{% endif %}
+</li>
+{% endfor %}
+</ul>
+
+</div><!-- visibility -->
+
+<!-- TABLE FOR OVER 64em ONLY -->
+
+<div data-visibility="large">
+
 <table class="alt-comparison">
 <thead>
 <tr>
@@ -141,6 +166,10 @@
 </tbody>
 
 </table>
+
+</div><!-- visibility -->
+
+</div><!-- one -->
 
 </div><!-- layout -->
 {% endif %}

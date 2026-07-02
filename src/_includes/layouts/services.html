@@ -108,7 +108,7 @@
 </div>
 
 <div class="services-tabs-listing">
-{% if item.data.list and item.data.list.items %}<ul>
+{% if item.data.list and item.data.list.items %}<ul class="spacing-s">
 {% for listItem in item.data.list.items %}
 {% if listItem.listItem %}<li>{{ listItem.listItem }}</li>{% endif %}
 {% endfor %}</ul>
@@ -147,7 +147,7 @@
 <h3>{{ item.title }}</h3>
 <p>{{ item.text }}</p>
 {% if item.list and item.list.items %}
-<ul>
+<ul class="spacing-s">
 {% for listItem in item.list.items %}
 {% if listItem.listItem %}<li>{{ listItem.listItem }}</li>{% endif %}
 {% endfor %}
