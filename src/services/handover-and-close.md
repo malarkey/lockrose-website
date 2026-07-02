@@ -1,10 +1,10 @@
 ---
-title: "Handover and close"
+title: "5. Handover and close"
 metaDesc: "Get ready for delivery properly. We help turn intent into plans, controls, procurement routes, commercial thinking, schedules, governance, and risk management that can survive contact with the real world."
 
 summary: "Get ready for delivery properly. We help turn intent into plans, controls, procurement routes, commercial thinking, schedules, governance, and risk management that can survive contact with the real world."
 
-descripion: "Get ready for delivery properly. We help turn intent into plans, controls, procurement routes, commercial thinking, schedules, governance, and risk management that can survive contact with the real world."
+description: "Get ready for delivery properly. We help turn intent into plans, controls, procurement routes, commercial thinking, schedules, governance, and risk management that can survive contact with the real world."
 
 outcome: "A cleaner close and more confidence that the programme has delivered what it set out to deliver."
 
@@ -23,7 +23,7 @@ thumbnail: ""
 quotation: ""
 
 featured: false
-order: 1
+order: 5
 slug: "handover-and-close"
 
 ctaText: "More about handover and close"

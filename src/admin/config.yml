@@ -60,6 +60,10 @@ collections:
                   - label: Label
                     name: label
                     widget: string
+                  - label: Description
+                    name: description
+                    widget: text
+                    required: false
           - label: Experience section
             name: experienceSection
             widget: object
@@ -570,6 +574,14 @@ collections:
               - label: Text
                 name: text
                 widget: text
+          - label: Featured title
+            name: featuredTitle
+            widget: string
+            required: false
+          - label: Featured summary
+            name: featuredSummary
+            widget: text
+            required: false
           - label: CTA headline
             name: ctaHeadline
             widget: string
@@ -886,7 +898,7 @@ collections:
         widget: text
         required: false
       - label: Description
-        name: descripion
+        name: description
         widget: text
         required: false
       - label: Outcome

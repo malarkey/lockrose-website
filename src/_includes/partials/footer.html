@@ -1,13 +1,33 @@
+<footer role="contentinfo">
+
 <div id="footer-logo">
 <a href="#{{ site.siteID }}" title="Top">{% include "partials/svgs/logo-teal-h.svg" %}<span data-visibility="hidden">{{ site.name }}</span></a>
 </div><!-- footer-logo -->
 
+<div class="layout" data-layout="madrid">
+
+<div>
+{% if ctaHeadline %}<h3 data-size="l">{{ ctaHeadline }}</h3>
+{% else %}
+<h3 data-size="l">Need capable people on a complex programme?</h3>{% endif %}
+<div class="alt-flex">
+{% if ctaText %}<p class="alt-uppercase">{{ ctaText }}</p>
+{% else %}
+<p class="alt-uppercase">Tell us what you are trying to deliver</p>{% endif %}
+<a href="/contact" class="btn">{% if ctaButton %}{{ ctaButton }}{% else %}Start a conversation{% endif %}</a>
+</div><!-- alt-flex -->
+</div><!-- one -->
+
+<div>
 <ul class="alt-inline">
 {% for item in footer_navigation.items %}
 <li><a href="{{ item.url }}"{{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a></li>
 {% endfor %}
 </ul>
 
-<small id="alt-copyright">&#169; {{ global.currentYear() }}&#8211;now. {{ site.copyrightOwner or site.name }}. All Rights Reserved</small>
+<small id="alt-copyright">&#169; {{ global.currentYear() }}&#8211;now. {{ site.copyrightOwner or site.name }} All Rights Reserved. <a href="https://stuffandnonsense.co.uk" title="Website design">Design by Stuff &#38; Nonsense</a></small>
+</div><!-- two -->
 
-<small id="alt-credits"><a href="https://stuffandnonsense.co.uk" title="Website design">Design by Stuff &#38; Nonsense</a></small>
+</div><!-- layout -->
+
+</footer>

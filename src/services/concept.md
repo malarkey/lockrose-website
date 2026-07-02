@@ -1,10 +1,10 @@
 ---
-title: "Concept"
+title: "1. Concept"
 metaDesc: "Make the project make sense before serious money is committed. We help test the idea, expose the risks, shape the route forward, and give decision-makers something solid to work with."
 
 summary: "Make the project make sense before serious money is committed. We help test the idea, expose the risks, shape the route forward, and give decision-makers something solid to work with."
 
-descripion: "At concept stage, the work needs clarity. What is being delivered? Why does it matter? Is the route viable? Where are the risks? What decisions need to be made before the programme gathers speed?"
+description: "At concept stage, the work needs clarity. What is being delivered? Why does it matter? Is the route viable? Where are the risks? What decisions need to be made before the programme gathers speed?"
 
 outcome: "A programme that is ready to mobilise with clearer controls, responsibilities, and decision routes."
 

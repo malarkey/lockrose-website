@@ -8,7 +8,7 @@
 
 <div>
 {% if image %}<figure>
-<img src="{{ image }}" alt="{{ title }}">
+<img src="/images/{{ image }}" alt="{{ title }}">
 </figure>{% endif %}
 
 {% if hasCaseStudyMeta %}
@@ -77,7 +77,7 @@
 
 {% if whatChanged and whatChanged.items %}
 <h2>What changed</h2>
-<ul>
+<ul class="spacing-s">
 {% for changedItem in whatChanged.items %}
 {% if changedItem.listItem %}<li>{{ changedItem.listItem }}</li>{% endif %}
 {% endfor %}
@@ -86,14 +86,13 @@
 
 <hr>
 
-<h3>More stories</h3>
-
 {% set otherCaseStudies = helpers.getSiblingContent(collections.caseStudiesItems, page, 2, false) %}
 {% for caseStudy in otherCaseStudies %}
 <article class="item-case-study-list">
 <h3><a href="{{ caseStudy.url }}">{{ caseStudy.data.title }}</a></h3>
 {% if caseStudy.data.summary %}<p>{{ caseStudy.data.summary }}</p>{% endif %}
 </article>
+<hr data-function="spacer">
 {% endfor %}
 
 </div><!-- two -->

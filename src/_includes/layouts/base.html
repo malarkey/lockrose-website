@@ -26,26 +26,11 @@
 
 {% endblock %}
 
-<footer role="contentinfo">
 
-<div class="layout" data-layout="madrid">
 
-<div>
-{% if ctaHeadline %}<h3 data-size="m">{{ ctaHeadline }}</h3>{% else %}<h3 data-size="m">Need capable people on a complex programme?</h3>{% endif %}
-<div class="alt-flex">
-{% if ctaText %}<p>{{ ctaText }}</p>{% else %}<p>Tell us what you are trying to deliver</p>{% endif %}
-<a href="/contact" class="btn">{% if ctaButton %}{{ ctaButton }}{% else %}Start a conversation{% endif %}</a>
-</div>
-</div><!-- one -->
 
-<div>
+
 {% include "partials/footer.html" %}
-</div><!-- two -->
-
-</div><!-- layout -->
-
-</footer>
-
 
 <script src="{{ site.assetPath }}/js/scripts.js"></script>
 </body>

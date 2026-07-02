@@ -21,17 +21,23 @@
 <div>
 {% if featuredCaseStudy %}
 <article class="alt-promo" data-case-study-card data-case-study-categories="{% if featuredCaseStudy.data.categories and featuredCaseStudy.data.categories.length %}{% for category in featuredCaseStudy.data.categories %}{{ category | slug }}{% if not loop.last %} {% endif %}{% endfor %}{% endif %}">
+
+{% if featuredCaseStudy.data.image %}<figure>
+<img src="/images/{{ featuredCaseStudy.data.image }}" alt="{{ featuredCaseStudy.data.title }}">
+</figure>{% endif %}
+
 <small class="alt-meta">{{ featuredCaseStudy.data.title }}</small>
 <h2 data-size="3xl"><a href="{{ featuredCaseStudy.url }}">{{ featuredCaseStudy.data.lede or featuredCaseStudy.data.title }}</a></h2>
 
 {% if featuredCaseStudy.data.summary %}
-<p>{{ featuredCaseStudy.data.summary }}</p>
+{% if featuredCaseStudy.data.summary %}<p>{{ featuredCaseStudy.data.summary }}</p>{% endif %}
 {% endif %}
 
 {% set archiveStats = featuredCaseStudy.data.archiveStats %}
 {% include "partials/case-study-archive-stats.html" %}
 
-<div class="btn-cta" data-variation="bordered">
+<div class="btn-cta" data-variation="icon">
+{% include "partials/svgs/icon-logomark.svg" %}
 <a href="{{ featuredCaseStudy.url }}" class="btn" data-variant="secondary">Read the client story</a>
 </div><!-- btn-cta -->
 </article>
@@ -67,6 +73,8 @@
 
 
 {% if collections.caseStudiesCategories.length %}
+<hr>
+
 <nav aria-label="Filter case studies by category">
 <ul class="filters" data-case-studies-filters>
 <li><a href="/case-studies/" aria-current="true" data-case-studies-filter="all">All</a></li>
@@ -78,7 +86,7 @@
 {% endif %}
 
 
-<div data-layout="grid">
+<div data-layout="grid" data-variation="bordered" data-opposite="true">
 {% set caseStudyItems = collections.caseStudiesItems %}
 {% set excludeCaseStudyUrl = featuredCaseStudy.url if featuredCaseStudy else "" %}
 {% include "partials/case-studies-list.html" %}

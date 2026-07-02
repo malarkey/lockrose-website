@@ -1,13 +1,12 @@
 ---
-title: Lockrose — Delivery-ready specialists for complex infrastructure programmes
-metaDesc: Lockrose — Delivery-ready specialists for complex infrastructure programmes
+title: Lockrose — Experience when delivery matters. Navigating the realities of project delivery
+metaDesc: Lockrose — Experience when delivery matters. Navigating the realities of project delivery.
 layout: layouts/home.html
 
-lede: |
-  <p class="alt-lede">Delivery-ready specialists for complex infrastructure programmes</p>
+lede: "Experience when delivery matters. Navigating the realities of project delivery"
 
 aside: |
-  When a major project needs help, you do not have six weeks to find someone, brief them, and hope they get up to speed. Lockrose provides people who know the work, understand the pressure, and can start making a difference from day one.
+  <p class="alt-lede">Major projects rarely follow a straight line. Lockrose provides the experience and judgement needed to navigate complexity, overcome obstacles and keep programmes moving forward.</p>
 
 featureImage: ""
 featureImageCaption: ""
@@ -18,10 +17,13 @@ homeStats:
   items:
     - value: £1bn
       label: programme
+      description: "Lockrose supported London Power Tunnels 2, a £1bn, 8-year programme to upgrade London’s electricity network. "
     - value: 30km
       label: cable tunnels
+      description: "The project includes 30km of cable tunnels, critical substation works, and four main works contractors."
     - value: 132kV
       label: GIS substations
+      description: "From more than two years of stalled options assessment to an approved delivery route in four weeks."
 
 experienceSection:
   title: When delivery cannot wait

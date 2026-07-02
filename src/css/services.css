@@ -14,3 +14,85 @@ margin-trim: block; }
 .item-service-list:not(:last-of-type) {
 border-block-end: var(--border-width-l) solid var(--color-border);
 padding-block-end: var(--spacing-r); }
+
+/* services-tabs */
+
+.services-tabs-button {
+background-color: transparent;
+border: 0;
+border-block-end: var(--border-width-l) solid transparent;
+border-radius: unset;
+color: var(--color-text-default);
+font-size: var(--font-size-r);
+opacity: .5;
+padding: 0 0 var(--spacing-s); }
+
+.services-tabs-button:hover {
+background-color: transparent;
+color: var(--color-text-default); }
+
+.services-tabs-button[aria-selected="true"] {
+border-block-end-color: var(--color-border);
+font-weight: var(--font-weight-m);
+opacity: 1; }
+
+.services-tabs-button:focus-visible {
+outline-offset: var(--spacing-xs); }
+
+.services-tabs-content {
+display: grid;
+gap: var(--spacing-r);
+grid-template-columns: 1.25fr 1fr; }
+
+.services-tabs-list {
+border-block-end: var(--border-width-l) solid var(--color-border);
+display: flex;
+flex-wrap: wrap;
+gap: var(--spacing-l);
+margin-block-end: var(--spacing-m); }
+
+.services-tabs-listing {
+margin-trim: block; }
+
+.services-tabs-listing ul {
+column-gap: var(--spacing-l);
+columns: 2; }
+
+.services-tabs-media-panel {
+margin-block-end: var(--spacing-l);
+opacity: 1;
+transition: opacity var(--animate-duration-fast) ease; }
+
+.services-tabs-media-panel img,
+.services-tabs-media-placeholder {
+aspect-ratio: 4 / 1;
+border: var(--border-width-r) solid var(--color-border);
+display: block;
+width: 100%; }
+
+.services-tabs-media-placeholder {
+background-image:
+linear-gradient(to bottom right, transparent calc(50% - 1px), var(--color-border) 50%, transparent calc(50% + 1px)),
+linear-gradient(to top right, transparent calc(50% - 1px), var(--color-border) 50%, transparent calc(50% + 1px));
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100% 100%; }
+
+.services-tabs-panel {
+margin-trim: block;
+opacity: 1;
+transition: opacity var(--animate-duration-fast) ease; }
+
+.services-tabs-media-panel.is-entering,
+.services-tabs-panel.is-entering {
+opacity: 0; }
+
+@media screen and (max-width: 47.99rem) {
+.services-tabs-button {
+font-size: var(--font-size-m); }
+
+.services-tabs-content {
+grid-template-columns: 1fr; }
+
+.services-tabs-listing ul {
+columns: 1; } }

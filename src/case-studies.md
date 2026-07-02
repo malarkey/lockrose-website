@@ -6,8 +6,9 @@ permalink: /client-stories/
 lede: ""
 
 archiveIntroSection:
-  title: Client stories
-  text: It is easy to say you can bring control to a complex programme. The useful question is what happens when you actually step into one. These stories show how we help clients move work forward when the pressure is real.
+  title: Real projects, challenges, and outcomes
+  text: Anyone can talk about capability. These stories show what happens when that capability is put into practice.
+
   buttonText: Discuss a project
   buttonUrl: /contact/
 

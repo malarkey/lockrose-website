@@ -11,7 +11,7 @@ clientLogo: ""
 categories:
   - "Energy and power"
 
-image: ""
+image: "placeholder-case-study-1.webp"
 thumbnail: ""
 
 quotation: ""
@@ -53,14 +53,15 @@ archiveStats:
   items:
     - value: 4
       label: weeks to approval
+      description: Non-SF6 GIS technology
+
     - value: 3
       label: critical schemes
+      description: Complex land acquisition
+
     - value: 132kV
       label: GIS redevelopment
-    - label: Non-SF6 GIS technology
-    - label: Complex land acquisition
-    - label: Long-lead risk reduced
-
+      description: Long-lead risk reduced
 ---
 
 ## The situation

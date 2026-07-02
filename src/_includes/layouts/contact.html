@@ -1,7 +1,7 @@
 {% set assetHash = global.random() %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="reversed">
 
 {% include "partials/head.html" %}
 
@@ -20,7 +20,7 @@
 <div class="layout" data-layout="dublin">
 
 <div>
-{% if lede %}{{ lede | markdown | safe }}{% endif %}
+{% if lede %}<p class="alt-lede">{{ lede}}</p>{% endif %}
 </div><!-- one -->
 
 <div>
@@ -72,7 +72,7 @@
 </div><!-- two -->
 
 <div>
-{% if site.copyrightOwner %}<p><b>{{ site.copyrightOwner }}</b></p>{% endif %}
+{% if site.copyrightOwner %}<p class="alt-uppercase"><b>{{ site.copyrightOwner }}</b></p>{% endif %}
 
 {% if site.email %}<p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>{% endif %}
 
@@ -103,21 +103,7 @@
 
 
 
-<footer role="contentinfo">
-
-<div class="layout" data-layout="madrid">
-
-<div>
 {% include "partials/footer.html" %}
-</div><!-- two -->
-
-</div><!-- layout -->
-
-</footer>
-
-
-
-
 
 <script src="{{ site.assetPath }}/js/scripts.js"></script>
 </body>

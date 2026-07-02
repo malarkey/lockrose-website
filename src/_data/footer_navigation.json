@@ -1,6 +1,10 @@
 {
   "items": [
     {
+      "text": "Team",
+      "url": "/team/"
+    },
+    {
       "text": "Careers",
       "url": "/careers/"
     },
@@ -9,7 +13,7 @@
       "url": "/privacy/"
     },
     {
-      "text": "Terms and conditions",
+      "text": "Terms",
       "url": "/terms/"
     },
     {

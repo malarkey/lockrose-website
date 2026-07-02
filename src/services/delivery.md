@@ -1,10 +1,10 @@
 ---
-title: "Delivery"
+title: "4. Delivery"
 metaDesc: "Get ready for delivery properly. We help turn intent into plans, controls, procurement routes, commercial thinking, schedules, governance, and risk management that can survive contact with the real world."
 
 summary: "Get ready for delivery properly. We help turn intent into plans, controls, procurement routes, commercial thinking, schedules, governance, and risk management that can survive contact with the real world."
 
-descripion: "Delivery is where plans are tested by reality. Contractors have their own priorities. Access windows are limited. Commercial pressure grows. Change happens. Decisions can drift."
+description: "Delivery is where plans are tested by reality. Contractors have their own priorities. Access windows are limited. Commercial pressure grows. Change happens. Decisions can drift."
 
 outcome: "Better control over cost, time, quality, risk, interfaces, and contractor performance."
 
@@ -27,7 +27,7 @@ thumbnail: ""
 quotation: ""
 
 featured: false
-order: 1
+order: 4
 slug: "delivery"
 
 ctaText: "More about delivery"

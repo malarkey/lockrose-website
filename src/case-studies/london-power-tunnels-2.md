@@ -11,7 +11,7 @@ clientLogo: ""
 categories:
   - "Energy and power"
 
-image: ""
+image: "placeholder-case-study-1.webp"
 thumbnail: ""
 
 quotation: ""
@@ -54,13 +54,13 @@ archiveStats:
   items:
     - value: £1bn
       label: programme
-    - value: 8yr
+      description: Major infrastructure investment
+    - value: 8yrs
       label: delivery period
+      description: Multi-phase delivery programme
     - value: 30km
       label: cable tunnels
-    - label: Four main works contractors
-    - label: Critical substation works
-    - label: Regulatory milestones
+      description: Critical cable tunnel network
 
 ---
 

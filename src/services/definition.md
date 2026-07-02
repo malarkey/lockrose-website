@@ -1,10 +1,10 @@
 ---
-title: "Definition"
+title: "3. Definition"
 metaDesc: "Get ready for delivery properly. We help turn intent into plans, controls, procurement routes, commercial thinking, schedules, governance, and risk management that can survive contact with the real world."
 
 summary: "Get ready for delivery properly. We help turn intent into plans, controls, procurement routes, commercial thinking, schedules, governance, and risk management that can survive contact with the real world."
 
-descripion: "This is where intent becomes a working plan. It is also where many problems can be prevented before they become expensive."
+description: "This is where intent becomes a working plan. It is also where many problems can be prevented before they become expensive."
 
 outcome: "A programme that is ready to mobilise with clearer controls, responsibilities, and decision routes."
 
@@ -24,7 +24,7 @@ thumbnail: ""
 quotation: ""
 
 featured: false
-order: 1
+order: 3
 slug: "definition"
 
 ctaText: "More about definition"

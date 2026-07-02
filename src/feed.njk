@@ -1,32 +1,34 @@
 ---
 title: "Client stories feed"
-summary: "Full client stories from Lockrose case studies."
+summary: "Recent client stories from Lockrose case studies."
 permalink: "/feed.xml"
 ---
 {% set feedBaseUrl = site.absoluteUrl or site.url %}
+{% set feedItems = collections.caseStudiesItems | latestItems(25) %}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.name }} {{ title }}</title>
   <subtitle>{{ summary }}</subtitle>
   <link href="{{ feedBaseUrl }}{{ permalink }}" rel="self"/>
   <link href="{{ feedBaseUrl }}/client-stories/"/>
-  <updated>{{ collections.caseStudiesItems | rssLastUpdatedDate }}</updated>
+  <updated>{{ feedItems | rssLastUpdatedDate }}</updated>
   <id>{{ feedBaseUrl }}{{ permalink }}</id>
   <author>
     <name>{{ site.authorName }}</name>
     <email>{{ site.authorEmail }}</email>
   </author>
-  {% for item in collections.caseStudiesItems %}
+  {% for item in feedItems %}
     {% set absoluteItemUrl %}{{ feedBaseUrl }}{{ item.url | url }}{% endset %}
     <entry>
       <title>{{ item.data.title }}</title>
       <link href="{{ absoluteItemUrl }}"/>
       <updated>{{ (item.data.date or item.date) | rssDate }}</updated>
       <id>{{ absoluteItemUrl }}</id>
-      <summary>{{ item.data.summary or item.data.lede or item.data.title }}</summary>
-      <content type="html"><![CDATA[
-        {% include "partials/case-study-feed-content.njk" %}
-      ]]></content>
+      <author>
+        <name>{{ item.data.author or site.authorName }}</name>
+        <email>{{ site.authorEmail }}</email>
+      </author>
+      <summary>{{ item | feedSummary(280) | escape }}</summary>
     </entry>
   {% endfor %}
 </feed>

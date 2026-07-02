@@ -13,7 +13,7 @@
 
 
 
-<div class="layout" data-layout="madrid">
+<div class="layout" data-layout="rome">
 
 <div>
 <h1 data-size="3xl">{{ title }}</h1>
@@ -21,14 +21,13 @@
 
 <div class="btn-cta">
 <a href="/contact" class="btn">Discuss a project</a>
-<a href="/case-studies/" class="btn" data-variant="secondary">See proof</a>
+<a href="/client-stories/" class="btn" data-variant="secondary">See proof</a>
 </div><!-- btn-cta -->
-</div><!-- one -->
 
-<div>
 {% if roleChartSection %}
+<hr>
 <h2>{{ roleChartSection.title }}</h2>
-<p>{{ roleChartSection.text }}</p>
+{% if roleChartSection.text %}<p>{{ roleChartSection.text }}</p>{% endif %}
 {% endif %}
 
 <ul class="alt-accreditions">
@@ -37,7 +36,17 @@
 <li>{% include "partials/svgs/logo-interface.svg" %}</li>
 <li>{% include "partials/svgs/logo-ukas.svg" %}</li>
 </ul>
+</div><!-- one -->
 
+<div>
+{% if featureImage %}
+<figure>
+<img src="/images/{{ featureImage }}" alt="{{ featureImageCaption }}" />
+{% if featureImageCaption %}
+<figcaption>{{ featureImageCaption }}</figcaption>
+{% endif %}
+</figure>
+{% endif %}
 </div><!-- two -->
 
 </div><!-- layout -->
@@ -50,19 +59,24 @@
 
 {% if experienceSection %}
 
-<hr data-function="spacer">
+<hr>
 
-<div class="layout" data-layout="rome">
+<div class="layout" data-layout="amsterdam">
 <div>
 <h2 data-size="2xl">{{ experienceSection.title }}</h2>
 </div><!-- one -->
 </div><!-- layout -->
 
-<div class="layout" data-layout="vilnius">
+<div class="layout" data-layout="vilnius" data-variation="bordered" data-opposite="true">
 {% for item in experienceSection.items %}
 <div>
 <h3>{{ item.title }}</h3>
 <p>{{ item.text }}</p>
+{% if item.list and item.list.items %}<ul>
+{% for listItem in item.list.items %}
+{% if listItem.listItem %}<li>{{ listItem.listItem }}</li>{% endif %}
+{% endfor %}</ul>
+{% endif %}
 </div>
 {% endfor %}
 </div><!-- two -->
@@ -90,7 +104,7 @@
 <div>
 {% if trustedSection %}
 <h2 data-size="2xl">{{ trustedSection.title }}</h2>
-<p>{{ trustedSection.text }}</p>
+{% if trustedSection.text %}<p class="alt-lede">{{ trustedSection.text }}</p>{% endif %}
 {% endif %}
 </div><!-- one -->
 
@@ -100,26 +114,36 @@
 
 
 
-<div class="layout" data-layout="rome">
+{% if comparisonSection and comparisonSection.items and comparisonSection.items.length > 1 %}
+{% set usualRoute = comparisonSection.items[0] %}
+{% set lockroseWay = comparisonSection.items[1] %}
+{% set usualItems = usualRoute.list.items if usualRoute.list and usualRoute.list.items else [] %}
+{% set lockroseItems = lockroseWay.list.items if lockroseWay.list and lockroseWay.list.items else [] %}
+{% set rowCount = usualItems.length if usualItems.length > lockroseItems.length else lockroseItems.length %}
 
-{% if comparisonSection and comparisonSection.items %}
-{% for item in comparisonSection.items %}
-<div>
-<h2>{{ item.title }}</h2>
-{% if item.list and item.list.items %}
-<ul>
-{% for listItem in item.list.items %}
-{% if listItem.listItem %}<li>{{ listItem.listItem }}</li>{% endif %}
+<div class="layout" data-layout="amsterdam">
+
+<table class="alt-comparison">
+<thead>
+<tr>
+<th scope="col" data-align-h="right">{{ usualRoute.title }}</th>
+<th scope="col">{{ lockroseWay.title }}</th>
+</tr>
+</thead>
+
+<tbody>
+{% for rowIndex in range(0, rowCount) %}
+<tr>
+<td data-align-h="right">{% if usualItems[rowIndex] and usualItems[rowIndex].listItem %}{{ usualItems[rowIndex].listItem }}{% endif %}</td>
+<td>{% if lockroseItems[rowIndex] and lockroseItems[rowIndex].listItem %}{{ lockroseItems[rowIndex].listItem }}{% endif %}</td>
+</tr>
 {% endfor %}
-</ul>
-{% endif %}
-</div><!-- one -->
-{% endfor %}
-{% endif %}
+</tbody>
+
+</table>
 
 </div><!-- layout -->
-
-
+{% endif %}
 
 
 
@@ -136,25 +160,7 @@
 
 
 
-<footer role="contentinfo">
-
-<div class="layout" data-layout="madrid">
-
-<div>
-{% if ctaHeadline %}<h3 data-size="m">{{ ctaHeadline }}</h3>{% else %}<h3 data-size="m">Need capable people on a complex programme?</h3>{% endif %}
-<div class="alt-flex">
-{% if ctaText %}<p>{{ ctaText }}</p>{% else %}<p>Tell us what you are trying to deliver</p>{% endif %}
-<a href="/contact" class="btn">{% if ctaButton %}{{ ctaButton }}{% else %}Start a conversation{% endif %}</a>
-</div>
-</div><!-- one -->
-
-<div>
 {% include "partials/footer.html" %}
-</div><!-- two -->
-
-</div><!-- layout -->
-
-</footer>
 
 <script src="{{ site.assetPath }}/js/scripts.js"></script>
 </body>

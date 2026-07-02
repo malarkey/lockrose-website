@@ -1,26 +1,25 @@
 ---
 layout: "layouts/services.html"
-title: "We bring control to the messy middle of major projects"
+title: "Bridging the gap between strategy and delivery"
 metaDesc: Lockrose helps clients get hold of those moving parts and keep work moving from early strategy through to handover."
 permalink: /what-we-do/
 
-lede: |
-  Most infrastructure programmes do not fail because nobody made a plan. They struggle when the plan meets reality. Lockrose helps clients get hold of those moving parts and keep work moving from early strategy through to handover.
+lede: "Plans rarely fail on paper. The challenge comes when delivery gets underway. Lockrose brings experienced professionals who understand complex programmes and help clients maintain momentum through every stage of delivery."
 
 options:
   items:
-    - itemHeadline: I need one specialist
-      itemSummary: For a role that needs filling quickly, but cannot be filled by someone who needs months to learn the environment.
-    - itemHeadline: I need a delivery team
-      itemSummary: For larger programmes where several roles need to work together, not just sit beside each other on a chart.
-    - itemHeadline: I need programme control
-      itemSummary: For projects where reporting exists, but decisions, risks, costs, schedules, or contractor interfaces feel loose.
-    - itemHeadline: I need to unblock a stalled project
-      itemSummary: For programmes caught in options, approvals, land, access, commercial, or stakeholder problems.
+    - itemHeadline: Need the right person quickly?
+      itemSummary: We are experienced professionals who understand complex infrastructure and make a difference from day one.
+    - itemHeadline: Need a team working towards a shared outcome?
+      itemSummary: Integrated project delivery teams that bring coordination, momentum, and structure.
+    - itemHeadline: Need confidence that delivery is on track?
+      itemSummary: Construction assurance and programme controls that provide clarity, oversight, and visibility.
+    - itemHeadline: Need help navigating a critical challenge?
+      itemSummary: We are leaders who bring direction, build consensus, and unlock progress.
 
 needsSection:
-  title: You may need one person. You might need a team
-  text: Some clients come to us because they need one capable project manager, planner, commercial lead, or NEC supervisor. Others need a team that can bring structure, pace, and commercial grip to a larger programme. Either way, the point is the same. The people we provide need to understand the work, fit quickly into the client environment, and make delivery easier.
+  title: The solution isn’t always the same
+  text: Sometimes a programme needs one individual with the expertise to strengthen a critical area. Sometimes it needs a team that brings alignment, pace, and direction. Whatever the scale, Lockrose provides people who become part of the team quickly and help move projects forward.
 
 supportSection:
   title: Support from the first decision to final handover

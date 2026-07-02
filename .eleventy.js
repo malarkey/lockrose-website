@@ -6,6 +6,76 @@ const dateFilter = require("./src/filters/date-filter.js");
 const md = markdownIt({ html: true });
 const isProduction = process.env.ELEVENTY_ENV === "production";
 
+function stripHtml(value) {
+  return String(value || "")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&quot;/gi, "\"")
+    .replace(/&#39;/gi, "'")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function truncateText(value, maxLength = 280) {
+  const text = stripHtml(value);
+
+  if (!text || text.length <= maxLength) {
+    return text;
+  }
+
+  const shortened = text.slice(0, Math.max(0, maxLength - 1));
+  const lastSpaceIndex = shortened.lastIndexOf(" ");
+  const safeText = lastSpaceIndex > 0 ? shortened.slice(0, lastSpaceIndex) : shortened;
+
+  return `${safeText.trim()}...`;
+}
+
+function getItemDateValue(item) {
+  const itemDate = item && item.data && item.data.date ? item.data.date : item && item.date ? item.date : null;
+
+  if (itemDate) {
+    const date = new Date(itemDate);
+
+    if (!Number.isNaN(date.getTime())) {
+      return date.getTime();
+    }
+  }
+
+  if (item && item.data && item.data.year) {
+    return Date.UTC(Number(item.data.year), 11, 31);
+  }
+
+  return 0;
+}
+
+function getFeedSummary(item, maxLength = 280) {
+  if (!item || !item.data) {
+    return "";
+  }
+
+  const candidateFields = [
+    item.data.summary,
+    item.data.excerpt,
+    item.data.description,
+    item.data.metaDesc,
+    item.data.lede,
+    item.data.postSummary
+  ];
+
+  const preferredField = candidateFields.find((value) => String(value || "").trim());
+
+  if (preferredField) {
+    return truncateText(preferredField, maxLength);
+  }
+
+  return truncateText(item.templateContent || "", maxLength);
+}
+
 function minifyHtmlOutput(content, outputPath) {
   if (!isProduction || !outputPath || !outputPath.endsWith(".html")) {
     return content;
@@ -35,6 +105,26 @@ module.exports = function(eleventyConfig) {
   // Filters
   eleventyConfig.addFilter("dateFilter", dateFilter);
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
+  eleventyConfig.addFilter("feedSummary", (item, maxLength = 280) => {
+    return getFeedSummary(item, maxLength);
+  });
+  eleventyConfig.addFilter("latestItems", (items, count = 25) => {
+    if (!Array.isArray(items)) {
+      return [];
+    }
+
+    return [...items]
+      .sort((left, right) => {
+        const dateCompare = getItemDateValue(right) - getItemDateValue(left);
+
+        if (dateCompare !== 0) {
+          return dateCompare;
+        }
+
+        return (left.data.title || "").localeCompare(right.data.title || "");
+      })
+      .slice(0, count);
+  });
   eleventyConfig.addFilter("markdown", (content) => {
     if (!content) {
       return "";
@@ -54,6 +144,7 @@ module.exports = function(eleventyConfig) {
   // Passthrough copy
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/dl");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts" });
   eleventyConfig.addPassthroughCopy("src/images");
