@@ -6,7 +6,7 @@ permalink: "/contact/"
 
 lede: "Whether you need one specialist, a wider delivery team, or support unblocking a complex programme, start with a conversation."
 
-featureImage: ""
+featureImage: "placeholder-contact-1.webp"
 featureImageCaption: ""
 
 ctaButton: ""
