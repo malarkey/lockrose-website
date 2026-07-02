@@ -105,6 +105,7 @@
 
 /* Dark theme */
 
+/* Used by the contact page and any other reversed theme layouts */
 [data-theme="reversed"] {
 --color-background-default: #003A3B;
 --color-background-alt: #F3F9F6;
@@ -621,9 +622,6 @@ img { border-width: 0; }
 img[data-variant="logo"] {
 display: block;
 max-inline-size: 80px; }
-
---color-logo-mark: #FF7700;
---color-logo-type: #F3F9F6;
 
 .logo-mark {
 fill: var(--color-logo-mark); }
