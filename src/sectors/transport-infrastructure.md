@@ -12,8 +12,8 @@ list:
     - listItem: Operational infrastructure
     - listItem: Rail infrastructure
 
-image: ""
-thumbnail: ""
+image: "img-transport.webp"
+thumbnail: "img-transport-tbn.webp"
 quotation: ""
 
 featured: false

@@ -185,9 +185,10 @@
 <div id="section-sectors" class="layout" data-layout="vilnius" data-variation="bordered" data-opposite="true">
 
 {% for item in collections.sectorsItems %}<div>
-<figure>
-<img src="/images/placeholder-case-study-1.webp" alt="">
-</figure>
+{% if item.data.thumbnail %}<figure>
+<img src="/images/{{ item.data.thumbnail }}" alt="{{ featureImageCaption }}" />
+{% if featureImageCaption %}<figcaption>{{ featureImageCaption }}</figcaption>{% endif %}
+</figure>{% endif %}
 <h3>{{ item.data.title }}</h3>
 {% if item.data.summary %}<p>{{ item.data.summary }}</p>{% endif %}
 </div>{% endfor %}

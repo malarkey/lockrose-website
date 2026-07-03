@@ -100,9 +100,9 @@
 {% if item.data.slug != "energy-and-power" %}
 <div>
 
-<figure>
-<img src="/images/placeholder-case-study-1.webp" alt="">
-</figure>
+{% if item.data.thumbnail %}<figure>
+<img src="/images/{{ item.data.thumbnail }}" alt="{{ featureImageCaption }}" />
+</figure>{% endif %}
 
 <h3>{{ item.data.title }}</h3>
 <p>{{ item.data.descripion }}</p>

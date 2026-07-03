@@ -896,6 +896,21 @@ margin-block-start: auto; }
 
 
 /* ==========================================================================
+SELECTION
+========================================================================== */
+
+.alt-selection {
+display: flex;
+flex-direction: column;
+margin-trim: block; }
+
+.alt-selection .btn-cta {
+margin-block-start: auto;
+padding-block-end: unset; }
+
+
+
+/* ==========================================================================
 NAVIGATION
 ========================================================================== */
 
@@ -1401,8 +1416,7 @@ from { transform: scale3d(1, 1, 1); }
 to { transform: scale3d(1, 1, 1); }
 }
 
-.btn:active,
-button:active {
+.btn:active {
 animation-duration: 2s;
 animation-fill-mode: both;
 animation-iteration-count: 1;
