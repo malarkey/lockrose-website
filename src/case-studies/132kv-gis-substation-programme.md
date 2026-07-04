@@ -11,8 +11,8 @@ clientLogo: ""
 categories:
   - "Energy and power"
 
-image: "placeholder-case-study-1.webp"
-thumbnail: ""
+image: "story-gis-substation.avif"
+thumbnail: "story-gis-substation.avif"
 
 quotation: ""
 order: 2

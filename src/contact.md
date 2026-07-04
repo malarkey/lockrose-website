@@ -7,7 +7,7 @@ permalink: "/contact/"
 lede: "Whether you need one specialist, a wider delivery team, or support unblocking a complex programme, start with a conversation."
 
 featureImage: "placeholder-contact-1.webp"
-featureImageCaption: ""
+featureImageCaption: "Our office is in 1 Waterhouse Square, Holborn, London"
 
 ctaButton: ""
 ctaHeadline: ""

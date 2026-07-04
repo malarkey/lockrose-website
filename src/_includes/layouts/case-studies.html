@@ -23,7 +23,7 @@
 <article class="alt-promo" data-case-study-card data-case-study-categories="{% if featuredCaseStudy.data.categories and featuredCaseStudy.data.categories.length %}{% for category in featuredCaseStudy.data.categories %}{{ category | slug }}{% if not loop.last %} {% endif %}{% endfor %}{% endif %}">
 
 {% if featuredCaseStudy.data.image %}<figure>
-<img src="/images/{{ featuredCaseStudy.data.image }}" alt="{{ featuredCaseStudy.data.title }}">
+<a href="{{ featuredCaseStudy.url }}"><img src="/images/{{ featuredCaseStudy.data.image }}" alt="{{ featuredCaseStudy.data.title }}"></a>
 </figure>{% endif %}
 
 <small class="alt-meta">{{ featuredCaseStudy.data.title }}</small>

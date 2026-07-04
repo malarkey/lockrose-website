@@ -11,8 +11,8 @@ clientLogo: ""
 categories:
   - "Energy and power"
 
-image: "placeholder-case-study-1.webp"
-thumbnail: ""
+image: "story-london-power-tunnels.avif"
+thumbnail: "story-london-power-tunnels.avif"
 
 quotation: ""
 order: 1

@@ -12,14 +12,11 @@
 <div class="layout" data-layout="amsterdam">
 <div>
 
-{% if featureImage %}
 <figure>
-<img src="/images/{{ featureImage }}" alt="{{ featureImageCaption }}" />
-{% if featureImageCaption %}
-<figcaption>{{ featureImageCaption }}</figcaption>
-{% endif %}
+{% include "partials/svgs/img-contact-1.svg" %}
+{% if featureImageCaption %}<figcaption>{{ featureImageCaption }}</figcaption>{% endif %}
 </figure>
-{% endif %}
+
 
 <h1 data-size="3xl">{{ title }}</h1>
 </div><!-- one -->

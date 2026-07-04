@@ -8,14 +8,12 @@
 <div>
 
 {% if item.data.image %}<figure>
-<img src="/images/{{ item.data.image }}" alt="{{ item.data.title }}">
+<a href="{{ item.url }}"><img src="/images/{{ item.data.image }}" alt="{{ item.data.title }}"></a>
 </figure>{% endif %}
 
 {% if item.data.title %}<small class="alt-meta">{{ item.data.title }}</small>{% endif %}
 <h2 data-size="2xl"><a href="{{ item.url }}">{{ item.data.lede or item.data.title }}</a></h2>
 {% if item.data.summary %}<p>{{ item.data.summary }}</p>{% endif %}
-{% set archiveStats = item.data.archiveStats %}
-{% include "partials/case-study-archive-stats.html" %}
 </div>
 
 <div class="btn-cta" data-variation="icon">
