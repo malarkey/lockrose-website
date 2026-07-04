@@ -31,12 +31,16 @@ experienceSection:
   items:
     - title: Deliberately lean
       text: Fewer layers. Faster decisions. Direct access to people who can actually solve the problem.
+      icon: icon-texture-1.svg
     - title: Curated capability
       text: We do not send whoever happens to be free. We work with people we know, trust, and stand behind.
+      icon: icon-texture-2.svg
     - title: Practitioner-led
       text: Senior people stay close to the work. That means clearer judgement, quicker answers, and fewer things lost in translation.
+      icon: icon-texture-3.svg
     - title: Embedded and accountable
       text: We work as part of the client team. We do not sit at the edge of the programme sending reports about problems someone else needs to fix.
+      icon: icon-texture-4.svg
 
 servicesSection:
   title: How we help

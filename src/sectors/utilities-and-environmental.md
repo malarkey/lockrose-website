@@ -12,8 +12,8 @@ list:
     - listItem: Environmental infrastructure
     - listItem: Wastewater
 
-image: "img-utilities.webp"
-thumbnail: "img-utilities-tbn.webp"
+image: "img-utilities.avif"
+thumbnail: "img-utilities-tbn.avif"
 quotation: ""
 
 featured: false

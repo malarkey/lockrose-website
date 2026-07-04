@@ -42,6 +42,7 @@
 {% for item in options.items %}
 <div class="alt-selection">
 <div>
+{% if item.icon %}<img src="/images/{{ item.icon }}" alt="" class="icon-texture">{% endif %}
 <h3>{{ item.itemHeadline }}</h3>
 {% if item.itemSummary %}<p>{{ item.itemSummary }}</p>{% endif %}
 </div>
@@ -144,6 +145,7 @@
 {% if capabilitySection and capabilitySection.items %}
 {% for item in capabilitySection.items %}
 <div>
+{% if item.icon %}<img src="/images/{{ item.icon }}" alt="" class="icon-texture">{% endif %}
 <h3>{{ item.title }}</h3>
 <p>{{ item.text }}</p>
 {% if item.list and item.list.items %}

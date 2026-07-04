@@ -32,6 +32,7 @@ capabilitySection:
   items:
     - title: Project and programme leadership
       text: Senior people who can lead delivery, coordinate teams, support decisions, and keep focus on outcomes.
+      icon: icon-texture-1.svg
       list:
         items:
           - listItem: Project Director
@@ -41,6 +42,7 @@ capabilitySection:
 
     - title: Commercial management
       text: People who understand contracts, cost, change, value, and the importance of challenging assumptions.
+      icon: icon-texture-2.svg
       list:
         items:
           - listItem: Commercial Manager
@@ -49,6 +51,7 @@ capabilitySection:
 
     - title: Planning and controls
       text: Support that helps clients see what is happening, what is drifting, and what needs attention.
+      icon: icon-texture-3.svg
       list:
         items:
           - listItem: Senior Planning Manager
@@ -57,6 +60,7 @@ capabilitySection:
 
     - title: Risk, quality, and assurance
       text: People who help identify risk, strengthen assurance, maintain quality, and support safer, more predictable delivery.
+      icon: icon-texture-4.svg
       list:
         items:
           - listItem: Senior Risk Manager

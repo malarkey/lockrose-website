@@ -30,12 +30,7 @@
 {% if roleChartSection.text %}<p>{{ roleChartSection.text }}</p>{% endif %}
 {% endif %}
 
-<ul class="alt-accreditions">
-<li>{% include "partials/svgs/logo-apm.svg" %}</li>
-<li>{% include "partials/svgs/logo-cyber-essentials.svg" %}</li>
-<li>{% include "partials/svgs/logo-interface.svg" %}</li>
-<li>{% include "partials/svgs/logo-ukas.svg" %}</li>
-</ul>
+{% include "partials/svgs/logos-accreditations.svg" %}
 </div><!-- one -->
 
 <div>
@@ -70,6 +65,7 @@
 <div class="layout" data-layout="vilnius" data-variation="bordered" data-opposite="true">
 {% for item in experienceSection.items %}
 <div>
+{% if item.icon %}<img src="/images/{{ item.icon }}" alt="" class="icon-texture">{% endif %}
 <h3>{{ item.title }}</h3>
 <p>{{ item.text }}</p>
 {% if item.list and item.list.items %}<ul class="spacing-s">

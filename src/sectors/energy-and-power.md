@@ -6,8 +6,8 @@ summary: "Transmission, distribution, renewables, and grid connection programmes
 
 descripion: "Transmission, distribution, renewables, and grid connection programmes where access, interfaces, commercial pressure, and delivery dates all matter. Lockrose supports energy clients across major network upgrades, substation programmes, renewable energy developments, battery storage, and grid connection delivery."
 
-image: ""
-thumbnail: ""
+image: "img-energy.avif"
+thumbnail: "img-energy-tbn.avif"
 quotation: ""
 
 featured: false

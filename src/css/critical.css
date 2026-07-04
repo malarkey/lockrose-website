@@ -451,7 +451,7 @@ text-transform: uppercase; }
 .alt-inline li { display: inline-block; }
 .alt-inline li:not(:last-child) { margin-inline-end: var(--spacing-r); }
 
-/* Accreditions */
+/*
 .alt-accreditions {
 align-items: center;
 display: flex;
@@ -463,6 +463,7 @@ margin-block-start: var(--spacing-r); }
 .alt-accreditions svg {
 display: block;
 min-block-size: 56px; }
+*/
 
 /* Social */
 .alt-social li { display: inline-block; }
@@ -648,6 +649,11 @@ img[data-variant="logo"] {
 display: block;
 max-inline-size: 80px; }
 
+.icon-texture {
+display: block;
+inline-size: 48px;
+margin-block: var(--spacing-s); }
+
 .logo-mark {
 fill: var(--color-logo-mark); }
 
@@ -657,6 +663,11 @@ fill: var(--color-logo-type); }
 video {
 border-radius: var(--border-radius-r);
 margin-bottom: var(--spacing-r); }
+
+#logos-accreditations {
+display: block;
+margin-block: var(--spacing-m) 0;
+max-inline-size: 480px; }
 
 
 

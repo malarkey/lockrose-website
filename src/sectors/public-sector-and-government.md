@@ -14,8 +14,8 @@ list:
     - listItem: Governance, procurement, and commercial assurance
     - listItem: Transformation and programme delivery
 
-image: ""
-thumbnail: ""
+image: "img-public.avif"
+thumbnail: "img-public-tbn.avif"
 quotation: ""
 
 featured: false

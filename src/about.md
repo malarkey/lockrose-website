@@ -21,6 +21,7 @@ experienceSection:
   items:
     - title: Deliberately lean
       text: Clients get close access to experienced people who can understand the issue, make a call, and move things forward.
+      icon: icon-texture-1.svg
       list:
         items:
           - listItem: Decisions are taking too long
@@ -29,6 +30,7 @@ experienceSection:
           - listItem: Programme cannot wait for approval
     - title: Curated capability
       text: Our network is built around people whose judgement, standards, and delivery record we know.
+      icon: icon-texture-2.svg
       list:
         items:
           - listItem: You need someone ready quickly
@@ -37,6 +39,7 @@ experienceSection:
           - listItem: ou need confidence before someone walks onto site
     - title: Practitioner-led
       text: We are led by people who understand delivery from the inside. We do not just manage the account and leave the work to someone else.
+      icon: icon-texture-3.svg
       list:
         items:
           - listItem: The project needs experience
@@ -45,6 +48,7 @@ experienceSection:
           - listItem: Risks need ownership
     - title: Embedded and accountable
       text: Lockrose works inside the client environment. We learn the culture, understand the pressure, and take responsibility for helping the programme succeed.
+      icon: icon-texture-4.svg
       list:
         items:
           - listItem: Your team needs extra strength
