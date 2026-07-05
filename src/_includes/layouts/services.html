@@ -86,9 +86,7 @@
 <div class="services-tabs-media">
 {% for item in collections.servicesItems %}
 <div class="services-tabs-media-panel" id="services-media-panel-{{ loop.index }}" {% if not loop.first %}hidden{% endif %}>
-{% if item.data.image %}<img src="{{ item.data.image }}" alt="{{ item.data.title }}">
-{% else %}
-<div class="services-tabs-media-placeholder" aria-hidden="true"></div>{% endif %}
+{% if item.data.image %}<img src="/images/{{ item.data.image }}" alt="{{ item.data.title }}">{% endif %}
 </div>
 {% endfor %}
 </div><!-- services-tabs-media -->
