@@ -22,8 +22,8 @@ list:
     - listItem: Risk mitigation
     - listItem: Executive reporting
 
-image: ""
-thumbnail: ""
+image: "placeholder-tabs-1.webp"
+thumbnail: "placeholder-tabs-1.webp"
 quotation: ""
 
 featured: false

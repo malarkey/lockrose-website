@@ -30,7 +30,7 @@
 </div><!-- one -->
 
 <div>
-{% include "partials/svgs/img-index-1.svg" %}
+<img src="/images/img-index 1.webp" alt="">
 </div><!-- two -->
 
 </div><!-- introduction -->
@@ -126,7 +126,7 @@
 <div class="services-tabs-media">
 {% for item in collections.servicesItems %}
 <div class="services-tabs-media-panel" id="services-media-panel-{{ loop.index }}" {% if not loop.first %}hidden{% endif %}>
-{% if item.data.image %}<img src="{{ item.data.image }}" alt="{{ item.data.title }}">
+{% if item.data.image %}<img src="/images/{{ item.data.image }}" alt="{{ item.data.title }}">
 {% else %}
 <div class="services-tabs-media-placeholder" aria-hidden="true"></div>{% endif %}
 </div>
@@ -185,13 +185,15 @@
 
 <div id="section-sectors" class="layout" data-layout="vilnius" data-variation="bordered" data-opposite="true">
 
-{% for item in collections.sectorsItems %}<div>
+{% for item in collections.sectorsItems %}
+<div>
 {% if item.data.thumbnail %}<figure>
 <img src="/images/{{ item.data.thumbnail }}" alt="{{ item.data.title }}" />
 </figure>{% endif %}
 <h3>{{ item.data.title }}</h3>
 {% if item.data.summary %}<p>{{ item.data.summary }}</p>{% endif %}
-</div>{% endfor %}
+</div
+>{% endfor %}
 
 </div><!-- layout -->
 

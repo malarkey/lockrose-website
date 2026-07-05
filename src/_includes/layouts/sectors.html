@@ -39,14 +39,10 @@
 </div><!-- one -->
 
 <div>
-{% if featureImage %}
 <figure>
-<img src="/images/{{ featureImage }}" alt="{{ featureImageCaption }}" />
-{% if featureImageCaption %}
-<figcaption>{{ featureImageCaption }}</figcaption>
-{% endif %}
+{% include "partials/svgs/img-sectors-1.svg" %}
+{% if featureImageCaption %}<figcaption>{{ featureImageCaption }}</figcaption>{% endif %}
 </figure>
-{% endif %}
 </div><!-- two -->
 
 </div><!-- layout -->

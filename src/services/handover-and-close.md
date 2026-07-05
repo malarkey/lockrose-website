@@ -18,8 +18,8 @@ list:
     - listItem: As-built programme validation
     - listItem: Lessons learned
 
-image: ""
-thumbnail: ""
+image: "placeholder-tabs-1.webp"
+thumbnail: "placeholder-tabs-1.webp"
 quotation: ""
 
 featured: false

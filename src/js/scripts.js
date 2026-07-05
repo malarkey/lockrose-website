@@ -190,3 +190,178 @@ activateTab(tabs[nextIndex]);
 });
 });
 })();
+
+(() => {
+const aboutBlades = document.querySelectorAll("#animation-about .animation-about-blades");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (aboutBlades.length === 0 || reduceMotion) {
+return;
+}
+
+function easeInCubic(progress) {
+return progress * progress * progress;
+}
+
+function easeOutCubic(progress) {
+return 1 - Math.pow(1 - progress, 3);
+}
+
+aboutBlades.forEach((blade) => {
+let animationFrameId = null;
+
+function getBladeAnimations() {
+return blade.getAnimations().filter((animation) => animation.effect && animation.effect.target === blade);
+}
+
+function stopPlaybackRateAnimation() {
+if (animationFrameId === null) {
+return;
+}
+
+window.cancelAnimationFrame(animationFrameId);
+animationFrameId = null;
+}
+
+function animatePlaybackRate(targetRate, duration, easing, shouldPauseAtEnd = false) {
+const animations = getBladeAnimations();
+
+stopPlaybackRateAnimation();
+
+if (animations.length === 0) {
+return;
+}
+
+if (targetRate > 0) {
+animations.forEach((animation) => {
+animation.play();
+
+if (animation.playbackRate === 0) {
+animation.playbackRate = 0.001;
+}
+});
+}
+
+const startRates = animations.map((animation) => animation.playbackRate);
+const startedAt = window.performance.now();
+
+function tick(now) {
+const progress = Math.min((now - startedAt) / duration, 1);
+const easedProgress = easing(progress);
+
+animations.forEach((animation, index) => {
+const startRate = startRates[index];
+animation.playbackRate = startRate + ((targetRate - startRate) * easedProgress);
+});
+
+if (progress < 1) {
+animationFrameId = window.requestAnimationFrame(tick);
+return;
+}
+
+animationFrameId = null;
+
+if (!shouldPauseAtEnd) {
+return;
+}
+
+animations.forEach((animation) => {
+animation.pause();
+animation.playbackRate = 1;
+});
+}
+
+animationFrameId = window.requestAnimationFrame(tick);
+}
+
+blade.addEventListener("pointerenter", () => {
+animatePlaybackRate(0, 1200, easeOutCubic, true);
+});
+
+blade.addEventListener("pointerleave", () => {
+const animations = getBladeAnimations();
+
+if (animations.length === 0) {
+return;
+}
+
+animations.forEach((animation) => {
+animation.play();
+animation.playbackRate = 0.001;
+});
+
+animatePlaybackRate(1, 900, easeInCubic);
+});
+});
+})();
+
+(() => {
+const contactGlowItems = Array.from(document.querySelectorAll("#animation-contact .animation-contact-glow"));
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (contactGlowItems.length === 0 || reduceMotion) {
+return;
+}
+
+const timeoutIds = [];
+
+function randomBetween(min, max) {
+return Math.floor(Math.random() * ((max - min) + 1)) + min;
+}
+
+function randomDuration(min, max, curve = 1) {
+const progress = Math.pow(Math.random(), curve);
+return Math.round(min + ((max - min) * progress));
+}
+
+function scheduleGlow(item, isActive = false) {
+item.classList.toggle("is-active", isActive);
+
+if (isActive) {
+item.setAttribute("filter", "url(#animation-contact-glow-filter)");
+} else {
+item.removeAttribute("filter");
+}
+
+let nextDelay;
+let nextState = isActive;
+
+if (isActive) {
+nextDelay = randomDuration(2600, 7200, .65);
+nextState = false;
+} else {
+const shouldLight = Math.random() > .35;
+
+if (shouldLight) {
+nextDelay = randomDuration(900, 5200, 1.8);
+nextState = true;
+} else {
+nextDelay = randomDuration(2600, 7600, .85);
+nextState = false;
+}
+}
+
+const timeoutId = window.setTimeout(() => {
+scheduleGlow(item, nextState);
+}, nextDelay);
+
+timeoutIds.push(timeoutId);
+}
+
+contactGlowItems.forEach((item, index) => {
+const startsActive = index % 4 === 0 || Math.random() > .7;
+const startDelay = startsActive ? randomDuration(0, 1600, 1.4) : randomDuration(0, 4200, .9);
+
+const timeoutId = window.setTimeout(() => {
+scheduleGlow(item, startsActive);
+}, startDelay);
+
+timeoutIds.push(timeoutId);
+});
+
+window.addEventListener("pagehide", () => {
+timeoutIds.forEach((timeoutId) => {
+window.clearTimeout(timeoutId);
+});
+}, { once: true });
+})();

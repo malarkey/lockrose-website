@@ -19,8 +19,8 @@ list:
     - listItem: Performance reporting
     - listItem: PMO mobilisation
 
-image: ""
-thumbnail: ""
+image: "placeholder-tabs-1.webp"
+thumbnail: "placeholder-tabs-1.webp"
 quotation: ""
 
 featured: false

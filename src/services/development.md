@@ -19,8 +19,8 @@ list:
     - listItem: Risk and opportunity analysis
     - listItem: Procurement route assessment
 
-image: ""
-thumbnail: ""
+image: "placeholder-tabs-1.webp"
+thumbnail: "placeholder-tabs-1.webp"
 quotation: ""
 
 featured: false

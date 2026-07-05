@@ -210,6 +210,46 @@ scroll-behavior: auto !important; }
 
 @media (prefers-reduced-motion: no-preference) {
 html { scroll-behavior: smooth; }
+
+@keyframes animation-about-blades-rotate {
+from { rotate: 0deg; }
+to { rotate: 360deg; }
+}
+
+@keyframes animation-about-light-blink {
+0%, 49.999% { fill: #ffbf00; }
+50%, 100% { fill: #ff7700; }
+}
+
+@keyframes animation-sectors-glow-fade {
+0%, 100% { fill: #ffbf00; }
+50% { fill: #ff7700; }
+}
+
+#animation-about .animation-about-blades {
+animation: animation-about-blades-rotate 10s linear infinite;
+transform-box: fill-box;
+transform-origin: center; }
+
+#animation-about .animation-about-light {
+animation: animation-about-light-blink 1s linear infinite;
+animation-delay: var(--animation-about-delay, 0s); }
+
+#animation-about > .animation-about-blades:nth-child(2) {
+animation-duration: 20s; }
+
+#animation-sectors .animation-sectors-glow {
+animation: animation-sectors-glow-fade 2.4s linear infinite;
+animation-delay: var(--animation-sectors-delay, 0s); }
+
+#animation-contact .animation-contact-glow {
+fill: #002c2c;
+transition: fill .35s ease; }
+
+#animation-contact .animation-contact-glow.is-active {
+fill: #f2f8f5; }
+
+
 }
 
 html {
@@ -1390,7 +1430,7 @@ padding-inline-end: unset; }
 margin-block-start: auto; }
 
 .introduction > *:nth-child(2) {
-grid-column: a3 / a5;
+grid-column: b3 / a5;
 grid-row: 1;
 margin-block-end: unset; }
 
