@@ -1,9 +1,9 @@
 ---
-title: Lockrose — Experience when delivery matters. Navigating the realities of project delivery
-metaDesc: Lockrose — Experience when delivery matters. Navigating the realities of project delivery.
+title: Lockrose — Experience when delivery matters. Guiding complex projects through the realities of delivery.
+metaDesc: Lockrose — Experience when delivery matters. Guiding complex projects through the realities of delivery.
 layout: layouts/home.html
 
-lede: "Experience when delivery matters. Navigating the realities of project delivery"
+lede: "Guiding complex projects through the realities of delivery."
 
 aside: |
   <p class="alt-lede">Major projects rarely follow a straight line. Lockrose provides the experience and judgement needed to navigate complexity, overcome obstacles and keep programmes moving forward.</p>
@@ -26,7 +26,7 @@ homeStats:
       description: "From more than two years of stalled options assessment to an approved delivery route in four weeks."
 
 experienceSection:
-  title: When delivery cannot wait
+  title: Small enough to be close. Experienced enough to be trusted
   text: Projects stall for all kinds of reasons. The right people are not in place. Contractors pull in different directions. Decisions take too long. Risks sit unresolved until they become expensive. Lockrose steps into that pressure with people who can lead, coordinate, challenge, and move work forward.
   items:
     - title: Deliberately lean

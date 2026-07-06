@@ -249,6 +249,28 @@ transition: fill .35s ease; }
 #animation-contact .animation-contact-glow.is-active {
 fill: #f2f8f5; }
 
+#animation-contact .animation-contact-lightning {
+opacity: 0;
+transition: opacity .08s ease; }
+
+#animation-contact .animation-contact-lightning.is-active {
+opacity: 1; }
+
+#animation-contact #animation-contact-lightnings,
+#animation-contact #animation-contact-mask,
+#animation-contact #animation-contact-overlay {
+opacity: 0;
+pointer-events: none;
+transition: opacity .18s ease; }
+
+#animation-contact.is-storm-active #animation-contact-lightnings,
+#animation-contact.is-storm-active #animation-contact-mask,
+#animation-contact.is-storm-active #animation-contact-overlay {
+opacity: 1; }
+
+#animation-contact #animation-contact-trigger {
+cursor: pointer; }
+
 
 }
 
@@ -1129,6 +1151,10 @@ padding-inline-start: var(--spacing-r); }
 [data-style="reversed"] .logo-type {
 fill: var(--color-text-alt); }
 
+[data-theme="reversed"] .logos-fill-1 {
+fill: #fff;
+}
+
 
 
 
@@ -1501,4 +1527,7 @@ transition-duration: 1ms !important; }
 *::after {
 animation: none !important;
 transition: none !important; }
+
+#animation-contact.is-storm-active .animation-contact-lightning {
+opacity: 1; }
 }

@@ -365,3 +365,155 @@ window.clearTimeout(timeoutId);
 });
 }, { once: true });
 })();
+
+(() => {
+const contactAnimation = document.querySelector("#animation-contact");
+const contactLightnings = document.querySelector("#animation-contact-lightnings");
+const contactMask = document.querySelector("#animation-contact-mask");
+const contactOverlay = document.querySelector("#animation-contact-overlay");
+const contactTrigger = document.querySelector("#animation-contact-trigger");
+const lightningItems = Array.from(document.querySelectorAll("#animation-contact .animation-contact-lightning"));
+const lightningIndexes = lightningItems.map((_, index) => index);
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (!contactAnimation || !contactLightnings || !contactMask || !contactOverlay || !contactTrigger) {
+return;
+}
+
+const timeoutIds = new Set();
+let isStormActive = false;
+
+function clearQueuedTimeouts() {
+timeoutIds.forEach((timeoutId) => {
+window.clearTimeout(timeoutId);
+});
+timeoutIds.clear();
+}
+
+function queueTimeout(callback, delay) {
+const timeoutId = window.setTimeout(() => {
+timeoutIds.delete(timeoutId);
+callback();
+}, delay);
+
+timeoutIds.add(timeoutId);
+}
+
+function randomBetween(min, max) {
+return Math.floor(Math.random() * ((max - min) + 1)) + min;
+}
+
+function setLightningState(activeIndexes = []) {
+const activeIndexSet = new Set(activeIndexes);
+
+lightningItems.forEach((item, index) => {
+item.classList.toggle("is-active", activeIndexSet.has(index));
+});
+}
+
+function scheduleNextBurst(delay = randomBetween(700, 2200)) {
+if (!isStormActive || reduceMotion || lightningItems.length === 0) {
+return;
+}
+
+queueTimeout(runStormBurst, delay);
+}
+
+function runStormBurst() {
+if (!isStormActive) {
+return;
+}
+
+const primaryIndex = lightningIndexes[randomBetween(0, lightningIndexes.length - 1)];
+const secondaryChoices = lightningIndexes.filter((index) => index !== primaryIndex);
+const secondaryIndex = secondaryChoices.length > 0
+? secondaryChoices[randomBetween(0, secondaryChoices.length - 1)]
+: primaryIndex;
+const allIndexes = lightningIndexes.slice();
+const burstPatterns = [
+[
+{ delay: 0, indexes: [primaryIndex] },
+{ delay: 70, indexes: [] },
+{ delay: 130, indexes: [primaryIndex] },
+{ delay: 220, indexes: [] }
+],
+[
+{ delay: 0, indexes: [primaryIndex] },
+{ delay: 55, indexes: [] },
+{ delay: 105, indexes: [secondaryIndex] },
+{ delay: 165, indexes: [primaryIndex, secondaryIndex] },
+{ delay: 280, indexes: [] }
+],
+[
+{ delay: 0, indexes: [primaryIndex, secondaryIndex] },
+{ delay: 80, indexes: [] },
+{ delay: 145, indexes: [primaryIndex] },
+{ delay: 220, indexes: [primaryIndex, secondaryIndex] },
+{ delay: 320, indexes: [] }
+],
+[
+{ delay: 0, indexes: allIndexes },
+{ delay: 95, indexes: [] },
+{ delay: 165, indexes: [primaryIndex, secondaryIndex] },
+{ delay: 290, indexes: [] }
+]
+];
+const selectedPattern = burstPatterns[randomBetween(0, burstPatterns.length - 1)];
+const finalStep = selectedPattern[selectedPattern.length - 1];
+
+selectedPattern.forEach((step) => {
+queueTimeout(() => {
+setLightningState(step.indexes);
+}, step.delay);
+});
+
+scheduleNextBurst(finalStep.delay + randomBetween(650, 2600));
+}
+
+function setStormState(nextState) {
+if (isStormActive === nextState) {
+return;
+}
+
+isStormActive = nextState;
+contactAnimation.classList.toggle("is-storm-active", nextState);
+contactLightnings.setAttribute("aria-hidden", String(!nextState));
+contactMask.setAttribute("aria-hidden", String(!nextState));
+contactOverlay.setAttribute("aria-hidden", String(!nextState));
+contactTrigger.setAttribute("aria-pressed", String(nextState));
+
+clearQueuedTimeouts();
+
+if (!nextState) {
+setLightningState();
+return;
+}
+
+if (reduceMotion) {
+setLightningState(lightningIndexes);
+return;
+}
+
+scheduleNextBurst(randomBetween(120, 600));
+}
+
+setStormState(false);
+
+contactTrigger.addEventListener("click", (event) => {
+event.preventDefault();
+setStormState(!contactAnimation.classList.contains("is-storm-active"));
+});
+
+contactTrigger.addEventListener("keydown", (event) => {
+if (event.key !== " ") {
+return;
+}
+
+event.preventDefault();
+setStormState(!contactAnimation.classList.contains("is-storm-active"));
+});
+
+window.addEventListener("pagehide", () => {
+clearQueuedTimeouts();
+}, { once: true });
+})();

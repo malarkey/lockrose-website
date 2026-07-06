@@ -7,6 +7,10 @@
 <div class="layout" data-layout="madrid">
 
 <div>
+{% set isContactPage = page.url == "/contact/" %}
+{% if isContactPage %}
+{% include "partials/svgs/logos-accreditations.svg" %}
+{% else %}
 {% if ctaHeadline %}<h3 data-size="l">{{ ctaHeadline }}</h3>
 {% else %}
 <h3 data-size="l">Need capable people on a complex programme?</h3>{% endif %}
@@ -16,6 +20,8 @@
 <p class="alt-uppercase">Tell us what you are trying to deliver</p>{% endif %}
 <a href="/contact" class="btn">{% if ctaButton %}{{ ctaButton }}{% else %}Start a conversation{% endif %}</a>
 </div><!-- alt-flex -->
+{% endif %}
+
 </div><!-- one -->
 
 <div>

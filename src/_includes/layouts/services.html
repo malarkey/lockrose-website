@@ -36,31 +36,8 @@
 
 <hr>
 
-<div class="layout" data-layout="vilnius" data-variation="bordered" data-opposite="true">
-
-{% if options and options.items %}
-{% for item in options.items %}
-<div class="alt-selection">
-<div>
-{% if item.icon %}<img src="/images/{{ item.icon }}" alt="" class="icon-texture">{% endif %}
-<h3>{{ item.itemHeadline }}</h3>
-{% if item.itemSummary %}<p>{{ item.itemSummary }}</p>{% endif %}
-</div>
-
-<div class="btn-cta">
-<a href="/contact/" class="btn" data-variant="secondary">Talk to us</a>
-</div><!-- btn-cta -->
-</div>
-{% endfor %}
-{% endif %}
-
-</div><!-- layout -->
 
 
-
-
-
-<hr data-function="spacer">
 
 <div class="layout" data-layout="madrid">
 
@@ -125,7 +102,7 @@
 
 
 
-<hr data-function="spacer">
+<hr>
 
 <div class="layout" data-layout="madrid">
 
@@ -153,6 +130,30 @@
 {% endfor %}
 </ul>
 {% endif %}
+</div>
+{% endfor %}
+{% endif %}
+
+</div><!-- layout -->
+
+
+
+
+
+<div class="layout" data-layout="vilnius" data-opposite="true">
+
+{% if options and options.items %}
+{% for item in options.items %}
+<div class="alt-promo alt-selection">
+<div>
+{% if item.icon %}<img src="/images/{{ item.icon }}" alt="" class="icon-texture">{% endif %}
+<h3>{{ item.itemHeadline }}</h3>
+{% if item.itemSummary %}<p>{{ item.itemSummary }}</p>{% endif %}
+</div>
+
+<div class="btn-cta">
+<a href="/contact/" class="btn" data-variant="secondary">Talk to us</a>
+</div><!-- btn-cta -->
 </div>
 {% endfor %}
 {% endif %}
