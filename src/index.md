@@ -3,7 +3,7 @@ title: Lockrose — Experience when delivery matters. Guiding complex projects t
 metaDesc: Lockrose — Experience when delivery matters. Guiding complex projects through the realities of delivery.
 layout: layouts/home.html
 
-lede: "Guiding complex projects through the realities of delivery."
+lede: "Guiding complex projects through the realities of delivery"
 
 aside: |
   <p class="alt-lede">Major projects rarely follow a straight line. Lockrose provides the experience and judgement needed to navigate complexity, overcome obstacles and keep programmes moving forward.</p>

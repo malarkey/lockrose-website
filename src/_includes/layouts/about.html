@@ -185,6 +185,31 @@
 
 
 
+{% if timeline and timeline.items and timeline.items.length %}
+<div class="layout" data-layout="tbilisi">
+
+<div>
+<h2 data-align-h="center">{{ timeline.title or "Our timeline" }}</h2>
+
+<ol class="alt-timeline">
+{% for item in timeline.items %}
+<li class="alt-timeline__item">
+<h3 class="alt-timeline__title{% if item.isLarge %} lg{% endif %}">{{ item.year }}</h3>
+<div class="alt-timeline__body">
+{{ item.body | markdown | safe }}
+</div>
+</li>
+{% endfor %}
+</ol>
+
+</div><!-- one -->
+
+</div>
+{% endif %}
+
+
+
+
 
 {% include "partials/footer.html" %}
 

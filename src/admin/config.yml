@@ -720,6 +720,30 @@ collections:
               - label: URL
                 name: url
                 widget: string
+      - label: Timeline
+        name: timeline
+        file: src/_data/timeline.json
+        fields:
+          - label: Heading
+            name: title
+            widget: string
+            required: false
+          - label: Items
+            name: items
+            widget: list
+            summary: "{{fields.year}}"
+            fields:
+              - label: Year
+                name: year
+                widget: string
+              - label: Highlight year
+                name: isLarge
+                widget: boolean
+                default: false
+                required: false
+              - label: Body
+                name: body
+                widget: markdown
   - name: case_studies
     label: Case studies
     folder: src/case-studies
