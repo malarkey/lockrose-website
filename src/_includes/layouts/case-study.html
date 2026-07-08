@@ -15,18 +15,12 @@
 {% if clientLogo %}<img src="{{ clientLogo }}" alt="{{ clientName or title }}" data-variant="logo">{% endif %}
 
 <small class="alt-meta">
-{% if title %}{{ title }} &#9650; {% endif %}
-
 {% if clientName %}
 {% if projectUrl %}<a href="{{ projectUrl }}">{{ clientName }}</a>{% else %}{{ clientName }}{% endif %}
 {% endif %}
 
 {% if year %}
 {% if clientName %} &#9650; {% endif %}{{ year }}
-{% endif %}
-
-{% if featured %}
-{% if clientName or year %} &#9650; {% endif %}Featured
 {% endif %}
 </small>
 {% endif %}
@@ -90,7 +84,6 @@
 {% for caseStudy in otherCaseStudies %}
 <article class="item-case-study-list">
 <h3><a href="{{ caseStudy.url }}">{{ caseStudy.data.title }}</a></h3>
-{% if caseStudy.data.summary %}<p>{{ caseStudy.data.summary }}</p>{% endif %}
 </article>
 <hr data-function="spacer">
 {% endfor %}

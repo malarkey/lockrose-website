@@ -1,15 +1,15 @@
 ---
-title: "London Power Tunnels 2"
-metaDesc: "London Power Tunnels 2 is an 8-year programme to upgrade the capital’s electricity network."
+title: "Integrating Delivery Across London Power Tunnels 2"
+metaDesc: "London Power Tunnels 2 is a major programme to strengthen the capital’s electricity network, delivering new cable tunnels, substation upgrades and critical network infrastructure."
 
-lede: "Keeping London’s £1bn electricity upgrade moving"
-summary: "London Power Tunnels 2 is an 8-year programme to upgrade the capital’s electricity network, including 30km of cable tunnels, critical substations, four main works contractors, and demanding regulatory milestones. Lockrose supported the enterprise programme, helping align contractors, protect system access, and keep delivery focused on the outcomes that mattered."
+lede: "Integrating Delivery Across London Power Tunnels 2"
+summary: "London Power Tunnels 2 is a major programme to strengthen the capital’s electricity network, delivering new cable tunnels, substation upgrades and critical network infrastructure. Lockrose provided Enterprise Project Integrator support, aligning delivery partners, coordinating complex programme interfaces, safeguarding critical system access requirements and maintaining focus on shared programme outcomes throughout the eight-year delivery programme."
 
 clientName: "National Grid"
 clientLogo: ""
 
 categories:
-  - "Energy and power"
+  - "Tunnels"
 
 image: "story-london-power-tunnels.avif"
 thumbnail: "story-london-power-tunnels.avif"
@@ -22,84 +22,97 @@ year: 2026
 projectUrl: ""
 
 result: |
-  The work helped create greater alignment, clearer accountability, and stronger programme coordination across the LPT2 enterprise. The first two circuits were successfully energised by March 2025, meeting a key regulatory milestone. The remaining two circuits are on track for energisation in 2026.
+  Lockrose established an integrated and aligned delivery environment across one of the UK's largest electricity infrastructure programmes.
 
-  Delivery risk was reduced through better alignment of contractor programmes and a shared understanding of priorities. The client also strengthened its role as Enterprise Integrator, actively steering programme outcomes while maintaining constructive relationships across the supply chain.
+  Through improved coordination of contractor interfaces, programme planning and system access requirements, the enterprise gained greater visibility of critical dependencies and stronger alignment around shared delivery objectives. The first two circuits were successfully energised against programme milestones, with the remaining circuits continuing towards commissioning.
+
+  By reinforcing the client's role as Enterprise Integrator, Lockrose strengthened collaboration, improved decision-making and maintained momentum across a complex, multi-partner programme.
 
 whatChanged:
   items:
-    - listItem: Contractor programmes brought into clearer view
-    - listItem: System access planning treated as programme constraint
-    - listItem: Delivery teams had better visibility of shared milestones
-    - listItem: The client was better supported in its integrator role
-    - listItem: Programme decisions became more focused on long-term outcomes
-    - listItem: Critical circuit energisation milestones stayed on track
+    - listItem: Enhanced programme integration across four principal contractors
+    - listItem: Improved visibility of critical interfaces and dependencies
+    - listItem: System access requirements identified and managed proactively within programme planning
+    - listItem: Stronger enterprise-wide collaboration and accountability
+    - listItem: More effective decision-making aligned to shared outcomes
+    - listItem: Successful delivery of key energisation milestones
+    - listItem: Continued progress towards programme completion
 
 summarySection:
   items:
     - summaryTitle: £1bn investment
-      summaryText: Nationally significant electricity infrastructure programme
+      summaryText: Major electricity infrastructure programme supporting London’s future energy needs
     - summaryTitle: 8-year programme
-      summaryText: Long-term delivery across multiple phases and partners
+      summaryText: Multi-phase delivery involving numerous stakeholders and delivery partners
     - summaryTitle: 30km of cable tunnels
-      summaryText: New tunnel routes stretching across London
-    - summaryTitle: 4 main works contractors
-      summaryText: Multiple delivery teams needing one aligned programme view
+      summaryText: New underground cable routes constructed across London
+    - summaryTitle: 4 principal contractors
+      summaryText: Multiple delivery teams working towards shared enterprise objectives
     - summaryTitle: March 2025 milestone
       summaryText: First two circuits successfully energised
-    - summaryTitle: 2026 target
-      summaryText: Remaining two circuits on track for energisation
+    - summaryTitle: 2026 completion target
+      summaryText: Remaining circuits progressing towards commissioning
 
 archiveStats:
   items:
     - value: £1bn
-      label: programme
-      description: Major infrastructure investment
+      label: investment
+      description: Major electricity infrastructure programme
     - value: 8yrs
-      label: delivery period
-      description: Multi-phase delivery programme
+      label: programme
+      description: Multi-phase delivery involving numerous stakeholders
     - value: 30km
       label: cable tunnels
-      description: Critical cable tunnel network
+      description: New underground cable routes constructed across London
 
 ---
 
 ---
 
-## The situation
+## The challenge
 
-London Power Tunnels 2 is the second phase of a major programme to upgrade London’s electricity network. The programme will replace three existing electricity circuits approaching the end of their life. It also includes substantial upgrade works to three critical substations—Wimbledon, New Cross, and Hurst—the construction of a new substation at Bengeworth Road, and eight headhouses along the route for tunnel access and ventilation.
+London Power Tunnels 2 formed the second phase of a long-term investment programme designed to modernise and reinforce London's electricity network. The programme included the construction of approximately 30 kilometres of cable tunnels, major upgrades at Wimbledon, New Cross and Hurst substations, a new substation at Bengeworth Road and eight tunnel headhouses providing access and ventilation along the route.
 
-The programme uses the Project 13 enterprise model, which brings owners, partners, advisers, and suppliers together around shared outcomes. In that model, the asset owner plays a more active role, partners work in more integrated ways, and success depends on collaboration rather than each contractor optimising around its own priorities. That sounds sensible on paper. In practice, it needs constant leadership, coordination, and decision-making.
+Delivered under the Project 13 enterprise model, the programme brought together asset owners, partners, suppliers and advisers around common objectives. Success depended upon effective collaboration, integrated planning and clear decision-making across multiple organisations and workstreams.
 
-## The pressure
+---
 
-LPT2 had several major delivery pressures happening at the same time. The programme includes four new double-circuit routes running through a new tunnel and three critical London substations. It also includes eight tunnel headhouses, complex substation upgrades, and a large customer connection scheme. The regulatory target required four circuits to be commissioned before March 2026, with two circuits needed in 2024 and two more in 2025. That meant programme alignment mattered. A delay in one place could quickly create consequences somewhere else.
+## Key considerations
 
-### System access
+### Programme integration
 
-London’s electricity network is heavily used, and outages need to be booked well in advance. That made system access one of the biggest constraints on the programme. Access requirements had to be understood early, protected carefully, and built into the overall programme strategy.
+With multiple major infrastructure projects progressing simultaneously, maintaining alignment across delivery partners was essential. Activities spanning tunnels, substations, cable installation and customer connections required coordination around common milestones and commissioning objectives.
 
-### Contractor alignment
+### System access management
 
-The programme involved four main works contractors, each with its own programme, priorities, and contractual obligations. Under the Project 13 model, the challenge was to move beyond individual contractor programmes and create one enterprise view of delivery. Contractors needed to focus on shared outcomes, not only their own Clause 32 programmes.
+Working on a live electricity network required careful planning and coordination of outages and access windows. Critical system access requirements had to be identified early and integrated into programme planning to support efficient delivery.
 
-## What Lockrose did
+### System access management
 
-Lockrose provided specialist senior project management support to perform the Enterprise Project Integrator role. That role was not about adding another layer of reporting. It was about helping the programme behave like one programme.
+Working on a live electricity network required careful planning and coordination of outages and access windows. Critical system access requirements had to be identified early and integrated into programme planning to support efficient delivery.
 
-### Aligned contractor programmes
+### Collaborative delivery
 
-Lockrose took ownership of the overall delivery programme and identified the main interdependencies across work packages. Targeted coordination workshops were used to focus on specific sites, circuits, and delivery themes. These workshops helped align contractor programmes with enterprise milestones, resolve conflicts, unlock constraints, and support joint decision-making.
+Four principal contractors delivered different elements of the programme, each with distinct responsibilities and delivery schedules. Establishing a single enterprise view of progress and performance was crucial to maintaining momentum and supporting informed decision-making.
 
-### Protected system access
+---
 
-Lockrose supported early and continuous engagement with key stakeholders, including the client and National Grid’s system operations team. This helped identify critical access requirements, prioritise them, and build them into the programme strategy before they became blockers.
+## Our approach
 
-### Shifted focus to shared outcomes
+Lockrose provided senior programme management support, undertaking the Enterprise Project Integrator role and bringing together the programme's many delivery, technical and stakeholder interfaces.
 
-A major part of the work was helping delivery partners move away from isolated contractor priorities and towards enterprise-wide outcomes. That meant reinforcing the principles of Project 13, creating space for open dialogue, encouraging joint problem-solving, and redefining success around overall programme performance.
+### Aligning programme delivery
 
-### A more active integrator role
+Lockrose coordinated the overall delivery programme, identifying key interdependencies and facilitating collaboration across delivery partners. Targeted planning and coordination workshops aligned activities, resolved emerging constraints and enabled timely decision-making against enterprise milestones.
 
-Lockrose helped the client take a more active integrator role. That included supporting strategic engagement with partners, clarifying enterprise-wide objectives, and helping decisions happen collaboratively, transparently, and early enough to protect milestones.
+### Supporting system access strategy
+
+Through proactive engagement with key stakeholders, including network operators and programme partners, Lockrose identified critical system access requirements and ensured they were incorporated into delivery planning at the earliest opportunity.
+
+### Promoting enterprise outcomes
+
+A key aspect of the role involved embedding the principles of Project 13, encouraging collaboration, transparency and shared accountability across the programme. Lockrose established a common understanding of priorities and reinforced a focus on overall programme success rather than individual work package performance.
+
+### Strengthening programme leadership
+
+Lockrose supported the client in its role as enterprise leader, facilitating stakeholder engagement, strengthening governance processes and enabling delivery partners to work collaboratively towards common objectives.

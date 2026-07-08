@@ -16,11 +16,6 @@ permalink: "{{ categoryPage.permalink }}"
 
 <div class="layout" data-layout="amsterdam">
 
-<div>
-<h1>{{ categoryPage.title }}</h1>
-<p><a href="/case-studies/">All case studies</a></p>
-</div>
-
 </div><!-- layout -->
 
 <div data-layout="grid" data-variation="bordered" data-opposite="true">
@@ -38,8 +33,8 @@ permalink: "{{ categoryPage.permalink }}"
 <a href="{{ item.url }}"><img src="/images/{{ item.data.image }}" alt="{{ item.data.title }}"></a>
 </figure>{% endif %}
 
-{% if item.data.title %}<small class="alt-meta">{{ item.data.title }}</small>{% endif %}
-<h2 data-size="2xl"><a href="{{ item.url }}">{{ item.data.lede or item.data.title }}</a></h2>
+{% if item.data.clientName %}<small class="alt-meta">{{ item.data.clientName }}</small>{% endif %}
+<h2 data-size="2xl"><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
 {% if item.data.summary %}<p>{{ item.data.summary }}</p>{% endif %}
 </div>
 

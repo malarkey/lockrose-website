@@ -22,7 +22,9 @@ background-color: transparent;
 border: 0;
 border-block-end: var(--border-width-l) solid transparent;
 border-radius: unset;
+box-sizing: border-box;
 color: var(--color-text-default);
+flex: 1;
 font-size: var(--font-size-r);
 opacity: .5;
 padding: 0 0 var(--spacing-s); }

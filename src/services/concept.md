@@ -18,8 +18,8 @@ list:
     - listItem: Governance design
     - listItem: Initial programme planning
 
-image: "placeholder-tabs-1.webp"
-thumbnail: "placeholder-tabs-1.webp"
+image: "img-process-1.avif"
+thumbnail: "img-process-1.avif"
 quotation: ""
 
 featured: false
