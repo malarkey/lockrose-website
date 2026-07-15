@@ -2,21 +2,22 @@
 
 {% block content %}
 
-<div class="layout" data-layout="athens">
+<div class="layout" data-layout="paris">
 
 <div>
 
 {% if image %}
-<img src="/images/{{ image }}" alt="{{ name }}">
+<figure><img src="/images/{{ image }}" alt="{{ name }}"></figure>
 {% endif %}
 
+{% if qualifications %}<small>{{ qualifications }}</small>{% endif %}
 <h1>{{ name }}</h1>
-
-{% if qualifications %}<p>{{ qualifications }}</p>{% endif %}
 
 {% if location %}<p>{{ location }}</p>{% endif %}
 
 {% if summary %}<p>{{ summary }}</p>{% endif %}
+
+{{ content | markdown | safe }}
 
 {% if email %}<a href="mailto:{{ email }}">{% include "partials/icons/icon-email.svg" %}<span data-visibility="hidden">Email</span></a>{% endif %}
 
@@ -27,6 +28,27 @@
 </div><!-- one -->
 
 <div>
+
+{% if careerTimeline and careerTimeline.length %}
+<h2 data-align-h="center">Career timeline</h2>
+
+<ol class="alt-timeline">
+{% for item in careerTimeline %}
+<li class="alt-timeline__item">
+<h3 class="alt-timeline__title{% if item.isLarge %} lg{% endif %}">{{ item.period }}</h3>
+<div class="alt-timeline__body">
+{% if item.title %}<p class="member-timeline-role"><strong>{{ item.title }}</strong></p>{% endif %}
+{% if item.summary %}{{ item.summary | markdown | safe }}{% endif %}
+</div>
+</li>
+{% endfor %}
+</ol>
+{% endif %}
+
+<hr>
+
+<h2>Also meet</h2>
+
 {% set otherMembers = helpers.getSiblingContent(collections.team, page, 2, false) %}
 {% for member in otherMembers %}
 <article class="item-team-list">

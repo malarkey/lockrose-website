@@ -20,11 +20,39 @@ ctaUrl: "/contact/"
 details:
   items:
     - itemHeadline: Transmission
-      itemSummary: High-voltage infrastructure, substations, cables, network reinforcement, resilience upgrades, and interface management with transmission owners and delivery partners.
+      itemSummary: Supporting the delivery of critical transmission infrastructure, from network reinforcement and resilience programmes to major substation and cable projects.
+      list:
+        items:
+          - listItem: High-voltage substations and transmission networks
+          - listItem: Cable and overhead line infrastructure
+          - listItem: Network reinforcement and resilience upgrades
+          - listItem: Interface management with asset owners and delivery partners
+
     - itemHeadline: Distribution
-      itemSummary: Primary and secondary substation programmes, network capacity upgrades, asset replacement, maintenance, and reliability programmes.
+      itemSummary: Helping network operators deliver reliable, resilient and future-ready distribution networks.
+      list:
+        items:
+          - listItem: Asset replacement and refurbishment
+          - listItem: Maintenance and reliability improvement programmes
+          - listItem: Network capacity and reinforcement upgrades
+          - listItem: Primary and secondary substation programmes
+
     - itemHeadline: Renewables and low carbon
-      itemSummary: Onshore and offshore renewable generation, battery storage, energy transition infrastructure, and grid connection coordination.
+      itemSummary: Supporting the infrastructure needed to enable the energy transition.
+      list:
+        items:
+          - listItem: Battery energy storage systems (BESS)
+          - listItem: Energy transition infrastructure
+          - listItem: Grid integration and connection coordination
+          - listItem: Onshore and offshore renewable generation
+
     - itemHeadline: Grid connections
-      itemSummary: Transmission and distribution connections, developer and DNO interface management, connection planning, and delivery support.
+      itemSummary: Providing the planning, coordination and delivery expertise needed to navigate increasingly complex connection requirements.
+      list:
+        items:
+          - listItem: Connection planning and programme coordination
+          - listItem: Delivery support from application to energisation
+          - listItem: Developer and DNO interface management
+          - listItem: Transmission and distribution connections
+
 ---

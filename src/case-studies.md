@@ -2,7 +2,7 @@
 title: "Client stories"
 metaDesc: Lockrose — Delivery-ready specialists for complex infrastructure programmes
 layout: "layouts/case-studies.html"
-permalink: /client-stories/
+permalink: /case-studies/
 lede: ""
 
 archiveIntroSection:

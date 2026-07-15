@@ -1,68 +1,71 @@
 ---
-title: Why clients bring Lockrose in
+title: Why clients choose Lockrose
 metaDesc: Lockrose — Delivery-ready specialists for complex infrastructure programmes
 layout: layouts/about.html
-permalink: /why-us/
+permalink: /why-lockrose/
 
 lede: |
-  <p class="alt-lede">Plans are easy to write, but delivering is the challenge. That's why clients choose Lockrose. We are experienced consultants who navigate the realities of project delivery.</p>
+  <p class="alt-lede">Plans are easy to create. Delivering them successfully is the real test. Clients choose us because we provide experienced consultants who understand the realities of project delivery. Whatever the challenge, we bring the expertise and support to keep projects moving forward and deliver results that matter.</p>
 
 aside: |
 
 featureImage: "img-about-1.svg"
-featureImageCaption: "Clients come to us because they want experienced people close to the work, shorter decision chains, and less uncertainty about who will actually turn up."
+featureImageCaption: "Clients choose us because they want experienced professionals close to the work, clear lines of accountability, and confidence that the people engaged will make a positive impact starting day one."
 
 roleChartSection:
-  title: Another name on an org chart won’t solve the problem
-  text: Large programmes often appear well resourced on paper. But when people don’t understand the work, challenge assumptions, or make decisions with confidence, progress stalls. Lockrose doesn’t start with availability. We start with capability.
+  title: The right people make all the difference
+  text: Projects rarely fail because there aren’t enough people. They struggle when critical roles lack the experience, judgement, or leadership needed to navigate complexity. We focus on capability first, providing experienced project professionals who can deliver the moment they arrive. That’s why clients turn to us.
 
 experienceSection:
   title: Four reasons clients choose Lockrose
   items:
     - title: Deliberately lean
-      text: Clients get close access to experienced people who can understand the issue, make a call, and move things forward.
+      text: Experienced people, fewer layers, faster decisions. Clients get access to professionals who understand issues, make decisions, and move programmes forward.
       icon: icon-texture-1.svg
       list:
         items:
-          - listItem: Decisions are taking too long
-          - listItem: Contractors need clearer direction
-          - listItem: The client team needs senior support
-          - listItem: Programme cannot wait for approval
+          - listItem: Access to senior professionals
+          - listItem: Shorter path from issue to action
+          - listItem: Greater accountability, clearer ownership
+          - listItem: Fast mobilisation and response to change
+
     - title: Curated capability
-      text: Our network is built around people whose judgement, standards, and delivery record we know.
+      text: Selected for judgement, not availability. Our network is built around people whose delivery record we trust.
       icon: icon-texture-2.svg
       list:
         items:
-          - listItem: You need someone ready quickly
-          - listItem: The role needs sector understanding
-          - listItem: The programme can’t take a long learning curve
-          - listItem: ou need confidence before someone walks onto site
+          - listItem: Capability matched to the challenge
+          - listItem: Proven experience in complex environments
+          - listItem: Faster time to value with minimal learning curve
+          - listItem: People you can trust to add value from the outset
+
     - title: Practitioner-led
-      text: We are led by people who understand delivery from the inside. We do not just manage the account and leave the work to someone else.
+      text: People who understand delivery. We are led by project professionals who understand the realities of delivery and stay close to the work.
       icon: icon-texture-3.svg
       list:
         items:
-          - listItem: The project needs experience
-          - listItem: You need support, not just reporting
-          - listItem: Responsibilities are unclear
-          - listItem: Risks need ownership
+          - listItem: Practical advice grounded in delivery
+          - listItem: Support that goes beyond administration and reporting
+          - listItem: Clearer ownership of risks, actions, and decisions
+          - listItem: Leadership focused on outcomes, not process
+
     - title: Embedded and accountable
-      text: Lockrose works inside the client environment. We learn the culture, understand the pressure, and take responsibility for helping the programme succeed.
+      text: Part of the team. Responsible for outcomes. We work within clients organisations, building relationships and trusted, and taking responsibility for helping programmes succeed.
       icon: icon-texture-4.svg
       list:
         items:
-          - listItem: Your team needs extra strength
-          - listItem: Stakeholders need bringing together
-          - listItem: Priorities need clearer ownership
-          - listItem: Work needs calm leadership
+          - listItem: Seamless integration with stakeholders and teams
+          - listItem: Stronger collaboration and alignment across partners
+          - listItem: Clear ownership of commitments and priorities
+          - listItem: Calm leadership when programmes come under pressure
 
 caseStudyPromos:
   - 132kv-gis-substation-programme
   - london-power-tunnels-2
 
 trustedSection:
-  title: Small enough to be close. Experienced enough to be trusted
-  text: Lockrose isn’t built around hierarchy, layers, or long decision chains. Clients choose us because they want experienced people close to the work, with the authority and judgement to help move projects forward. We stay connected to delivery, providing practical support where it matters most.
+  title: Close enough to care. Experienced enough to be trusted
+  text: We stay close to delivery, working alongside clients to provide clear advice, practical support, and experienced leadership. Clients trust us because we combine technical expertise with sound judgement. We help organisations navigate complexity, make confident decisions, and deliver successful outcomes.
 
 comparisonSection:
   items:

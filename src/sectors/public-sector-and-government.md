@@ -2,9 +2,9 @@
 title: "Public sector and government"
 metaDesc: "Capital projects, infrastructure investment, transformation, procurement, and commercial support for organisations that need better delivery and value from public assets."
 
-summary: "Capital projects, infrastructure investment, transformation, procurement, and commercial support for organisations that need better delivery and value from public assets."
+summary: "Supporting organisations to deliver capital investment, transformation and infrastructure programmes while improving governance, value and long-term organisational performance."
 
-descripion: "Capital projects, infrastructure investment, transformation, procurement, and commercial support for organisations that need better delivery and better value from public assets."
+descripion: "Supporting organisations to deliver capital investment, transformation and infrastructure programmes while improving governance, value and long-term organisational performance."
 
 list:
   items:

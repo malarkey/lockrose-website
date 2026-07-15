@@ -164,6 +164,20 @@ collections:
                             name: listItem
                             widget: string
                             required: false
+                  - label: Secondary list items
+                    name: list2
+                    widget: object
+                    required: false
+                    fields:
+                      - label: Items
+                        name: items
+                        widget: list
+                        required: false
+                        fields:
+                          - label: List item
+                            name: listItem
+                            widget: string
+                            required: false
           - label: CTA headline
             name: ctaHeadline
             widget: string
@@ -632,6 +646,10 @@ collections:
             name: address2
             widget: string
             required: false
+          - label: Contact CTA text
+            name: contactCtaText
+            widget: string
+            required: false
           - label: Town/city
             name: townCity
             widget: string
@@ -720,30 +738,6 @@ collections:
               - label: URL
                 name: url
                 widget: string
-      - label: Timeline
-        name: timeline
-        file: src/_data/timeline.json
-        fields:
-          - label: Heading
-            name: title
-            widget: string
-            required: false
-          - label: Items
-            name: items
-            widget: list
-            summary: "{{fields.year}}"
-            fields:
-              - label: Year
-                name: year
-                widget: string
-              - label: Highlight year
-                name: isLarge
-                widget: boolean
-                default: false
-                required: false
-              - label: Body
-                name: body
-                widget: markdown
   - name: case_studies
     label: Case studies
     folder: src/case-studies
@@ -921,6 +915,10 @@ collections:
         name: summary
         widget: text
         required: false
+      - label: Sub-headline
+        name: subHeadline
+        widget: string
+        required: false
       - label: Description
         name: description
         widget: text
@@ -1081,6 +1079,20 @@ collections:
               - label: Summary
                 name: itemSummary
                 widget: text
+              - label: List items
+                name: list
+                widget: object
+                required: false
+                fields:
+                  - label: Items
+                    name: items
+                    widget: list
+                    required: false
+                    fields:
+                      - label: List item
+                        name: listItem
+                        widget: string
+                        required: false
       - label: Body
         name: body
         widget: markdown
@@ -1133,3 +1145,23 @@ collections:
         name: summary
         widget: text
         required: false
+      - label: Career timeline
+        name: careerTimeline
+        widget: list
+        required: false
+        summary: "{{fields.period}} {{fields.title}}"
+        fields:
+          - label: Period
+            name: period
+            widget: string
+          - label: Role and organisation
+            name: title
+            widget: string
+          - label: Summary
+            name: summary
+            widget: markdown
+          - label: Highlight year
+            name: isLarge
+            widget: boolean
+            default: false
+            required: false

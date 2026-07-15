@@ -2,36 +2,36 @@
 layout: "layouts/services.html"
 title: "Bridging the gap between strategy and delivery"
 metaDesc: Lockrose helps clients get hold of those moving parts and keep work moving from early strategy through to handover."
-permalink: /what-we-do/
+permalink: /services/
 
-lede: "Plans rarely fail on paper. The challenge comes when delivery gets underway. Lockrose brings experienced professionals who understand complex programmes and help clients maintain momentum through every stage of delivery."
+lede: "We help organisations bridge the gap between strategy and delivery by providing experienced professionals who bring clarity, coordination, and confidence."
 
 options:
   items:
-    - itemHeadline: Need the right person quickly?
-      itemSummary: We are experienced professionals who understand complex infrastructure and make a difference from day one.
-    - itemHeadline: Need a team working towards a shared outcome?
-      itemSummary: Integrated project delivery teams that bring coordination, momentum, and structure.
-    - itemHeadline: Need confidence that delivery is on track?
-      itemSummary: Construction assurance and programme controls that provide clarity, oversight, and visibility.
-    - itemHeadline: Need help navigating a critical challenge?
-      itemSummary: We are leaders who bring direction, build consensus, and unlock progress.
+    - itemHeadline: Need experience leadrship?
+      itemSummary: Experienced project and programme professionals who provide direction, coordination and accountability across complex programmes.
+    - itemHeadline: Need commercial confidence?
+      itemSummary: Commercial specialists who help clients make informed decisions, manage risk and maximise value throughout delivery.
+    - itemHeadline: Need greater control and visibility?
+      itemSummary: Planning, controls and assurance capability that provides clarity, oversight and informed decision-making.
+    - itemHeadline: Need help managing risk and delivery assurance?
+      itemSummary: Independent assurance and risk expertise that helps programmes maintain confidence, compliance and performance.
 
 needsSection:
   title: The solution isn’t always the same
-  text: Sometimes a programme needs one individual with the expertise to strengthen a critical area. Sometimes it needs a team that brings alignment, pace, and direction. Whatever the scale, Lockrose provides people who become part of the team quickly and help move projects forward.
+  text: No two programmes face exactly the same challenge. Sometimes a project needs experienced leadership. Other times, a team needs additional capability. Sometimes an organisation needs specialist expertise to strengthen a critical area of delivery. Whatever the requirement, We provide professionals who integrate quickly, understand the environment, and help clients deliver with confidence.
 
 supportSection:
   title: Support from the first decision to final handover
-  text: Lockrose supports programmes across five broad stages. Not every client needs help at every stage. The value is knowing where pressure is building and bringing the right capability at the right time.
+  text: Lockrose supports programmes throughout the delivery lifecycle. Not every client needs support at every stage, and not every challenge requires the same response. The value lies in recognising when pressure is building, understanding what delivery needs next, and bringing the right capability at the correct time.
 
 capabilitySection:
   title: The right capability, joined up
-  text: Lockrose can provide individual specialists or build joined-up teams across the programme lifecycle. The important thing is not the role title. It is how those roles work together to improve delivery.
+  text: Lockrose can provide individual specialists or build integrated teams across the programme lifecycle. The value is not simply having the right people, but ensuring they work together to improve decision-making, strengthen delivery, and achieve successful outcomes.
 
   items:
     - title: Project and programme leadership
-      text: Senior people who can lead delivery, coordinate teams, support decisions, and keep focus on outcomes.
+      text: Senior people who provide direction, coordination and accountability across complex programmes.
       icon: icon-texture-1.svg
       list:
         items:
@@ -39,27 +39,45 @@ capabilitySection:
           - listItem: Programme Manager
           - listItem: Senior Project Manager
           - listItem: Project Manager
+      list2:
+        items:
+          - listItem: Delivery leadership
+          - listItem: Governance and decision-making
+          - listItem: Programme coordination
+          - listItem: Stakeholder alignment
 
     - title: Commercial management
-      text: People who understand contracts, cost, change, value, and the importance of challenging assumptions.
+      text: Commercial expertise that helps clients make informed decisions, manage risks, and maximise value.
       icon: icon-texture-2.svg
       list:
         items:
           - listItem: Commercial Manager
           - listItem: Senior Quantity Surveyor
           - listItem: Quantity Surveyor.
+      list2:
+        items:
+          - listItem: Change and value management
+          - listItem: Commercial strategy
+          - listItem: Contract administration
+          - listItem: Cost management
 
     - title: Planning and controls
-      text: Support that helps clients see what is happening, what is drifting, and what needs attention.
+      text: Providing visibility, forecasting and control, to support confident decision-making.
       icon: icon-texture-3.svg
       list:
         items:
           - listItem: Senior Planning Manager
           - listItem: Senior Planner
           - listItem: Planner.
+      list2:
+        items:
+          - listItem: Performance analysis
+          - listItem: Programme planning
+          - listItem: Progress reporting
+          - listItem: Performance analysis
 
     - title: Risk, quality, and assurance
-      text: People who help identify risk, strengthen assurance, maintain quality, and support safer, more predictable delivery.
+      text: Independent assurance and control that helps programmes manage uncertainty and maintain standards.
       icon: icon-texture-4.svg
       list:
         items:
@@ -68,6 +86,12 @@ capabilitySection:
           - listItem: NEC Supervisor
           - listItem: Quality Assurance Manager
           - listItem: Civil Inspector
+      list2:
+        items:
+          - listItem: Compliance monitoring
+          - listItem: Independent oversight
+          - listItem: Quality assurance
+          - listItem: Independent oversight
 
 ctaButton: "Start a conversation"
 ctaHeadline: "Need people who can make a difference quickly?"

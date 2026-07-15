@@ -27,7 +27,7 @@
 
 /* Colours */
 --color-brand: #FFBF00; /* Brand */
---color-accent: #FF7700; /* Primary accent */
+--color-accent: #E67200; /* Primary accent */
 
 --color-background-default: #F3F9F6; /* Main background */
 --color-background-alt: #00494A; /* Alternative background */
@@ -1124,6 +1124,7 @@ font-size: var(--font-size-s); }
 #footer-logo {
 align-items: end;
 display: flex;
+gap: var(--spacing-xs);
 margin-block-end: var(--spacing-m); }
 
 #footer-logo:before {
@@ -1131,7 +1132,8 @@ border-block-start: var(--border-width-r) solid var(--color-border);
 content: "";
 display: block;
 flex: 1;
-height: 1px; }
+height: 1px;
+translate: 0 1px; }
 
 #footer-logo a {
 display: block;

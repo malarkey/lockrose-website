@@ -2,15 +2,16 @@
 title: "Utilities and environmental"
 metaDesc: "Water, wastewater, environmental resilience, and regulated infrastructure programmes where reliability and long-term value matter."
 
-summary: "Water, wastewater, environmental resilience, and regulated infrastructure programmes where reliability and long-term value matter."
+summary: "Supporting regulated infrastructure programmes that improve resilience, maintain essential services and deliver long-term value for customers and stakeholders."
 
-descripion: "Water, wastewater, environmental resilience, and regulated infrastructure programmes where reliability and long-term value matter. These programmes often bring the same delivery pressures as energy: ageing assets, regulatory commitments, environmental requirements, live operational environments, stakeholder sensitivity, and the need to maintain service while work is delivered."
+descripion: "Supporting regulated infrastructure programmes that improve resilience, maintain essential services and deliver long-term value for customers and stakeholders."
 
 list:
   items:
-    - listItem: Clean water
+    - listItem: Asset resilience, compliance, and operational improvement
+    - listItem: Clean water infrastructure
     - listItem: Environmental infrastructure
-    - listItem: Wastewater
+    - listItem: Wastewater programmes
 
 image: "img-utilities.avif"
 thumbnail: "img-utilities-tbn.avif"

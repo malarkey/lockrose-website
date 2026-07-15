@@ -6,19 +6,14 @@ display: block;
 font-weight: normal; }
 
 .item-team img {
-display: block;
-margin-inline: auto;
-max-inline-size: 220px; }
-
-.item-team figcaption {
-text-align: center; }
+display: block; }
 
 .item-team-list {
 align-items: start;
 display: grid;
 gap: var(--spacing-r);
 grid-template-columns: 80px 1fr;
-margin-block-end: var(--spacing-r);
+margin-block: var(--spacing-r);
 margin-trim: block; }
 
 .item-team-list:not(:last-of-type) {
@@ -35,6 +30,9 @@ scale: var(--scale-up); }
 
 .icon-social path {
 fill: var(--color-text-link); }
+
+.member-timeline-role {
+margin-block-end: var(--spacing-xs); }
 
 .icon-social:hover path { fill: var(--color-text-link-hover); }
 

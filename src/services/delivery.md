@@ -4,23 +4,25 @@ metaDesc: "Get ready for delivery properly. We help turn intent into plans, cont
 
 summary: "Get ready for delivery properly. We help turn intent into plans, controls, procurement routes, commercial thinking, schedules, governance, and risk management that can survive contact with the real world."
 
-description: "Delivery is where plans are tested by reality. Contractors have their own priorities. Access windows are limited. Commercial pressure grows. Change happens. Decisions can drift."
+subHeadline: "Maintaining control when complexity increases"
 
-outcome: "Better control over cost, time, quality, risk, interfaces, and contractor performance."
+description: "Delivery is where plans meet reality. Priorities compete, risks emerge, contractors mobilise and commercial pressures grow. We help clients maintain control, manage change effectively and keep programmes moving forward."
+
+outcome: "Better control of cost, schedule, quality, risk, interfaces, and contractor performance."
 
 list:
   items:
-    - listItem: Project and programme leadership
-    - listItem: Contractor coordination
-    - listItem: Stakeholder coordination
     - listItem: Change control
-    - listItem: Variation management
     - listItem: Cost forecasting
     - listItem: Commercial administration
+    - listItem: Contractor coordination
     - listItem: Schedule monitoring
     - listItem: Delay analysis
-    - listItem: Risk mitigation
     - listItem: Executive reporting
+    - listItem: Project and programme leadership
+    - listItem: Risk mitigation
+    - listItem: Stakeholder management
+    - listItem: Variation management
 
 image: "img-process-4.avif"
 thumbnail: "img-process-4.avif"

@@ -22,11 +22,11 @@ year: 2026
 projectUrl: ""
 
 result: |
-  Lockrose established an integrated and aligned delivery environment across one of the UK's largest electricity infrastructure programmes.
+  Lockrose established an integrated and aligned delivery environment across one of the UK’s largest electricity infrastructure programmes.
 
   Through improved coordination of contractor interfaces, programme planning and system access requirements, the enterprise gained greater visibility of critical dependencies and stronger alignment around shared delivery objectives. The first two circuits were successfully energised against programme milestones, with the remaining circuits continuing towards commissioning.
 
-  By reinforcing the client's role as Enterprise Integrator, Lockrose strengthened collaboration, improved decision-making and maintained momentum across a complex, multi-partner programme.
+  By reinforcing the client’s role as Enterprise Integrator, Lockrose strengthened collaboration, improved decision-making and maintained momentum across a complex, multi-partner programme.
 
 whatChanged:
   items:
@@ -71,7 +71,7 @@ archiveStats:
 
 ## The challenge
 
-London Power Tunnels 2 formed the second phase of a long-term investment programme designed to modernise and reinforce London's electricity network. The programme included the construction of approximately 30 kilometres of cable tunnels, major upgrades at Wimbledon, New Cross and Hurst substations, a new substation at Bengeworth Road and eight tunnel headhouses providing access and ventilation along the route.
+London Power Tunnels 2 formed the second phase of a long-term investment programme designed to modernise and reinforce London’s electricity network. The programme included the construction of approximately 30 kilometres of cable tunnels, major upgrades at Wimbledon, New Cross and Hurst substations, a new substation at Bengeworth Road and eight tunnel headhouses providing access and ventilation along the route.
 
 Delivered under the Project 13 enterprise model, the programme brought together asset owners, partners, suppliers and advisers around common objectives. Success depended upon effective collaboration, integrated planning and clear decision-making across multiple organisations and workstreams.
 
@@ -99,7 +99,7 @@ Four principal contractors delivered different elements of the programme, each w
 
 ## Our approach
 
-Lockrose provided senior programme management support, undertaking the Enterprise Project Integrator role and bringing together the programme's many delivery, technical and stakeholder interfaces.
+Lockrose provided senior programme management support, undertaking the Enterprise Project Integrator role and bringing together the programme’s many delivery, technical and stakeholder interfaces.
 
 ### Aligning programme delivery
 

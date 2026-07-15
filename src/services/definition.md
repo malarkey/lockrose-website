@@ -4,20 +4,22 @@ metaDesc: "Get ready for delivery properly. We help turn intent into plans, cont
 
 summary: "Get ready for delivery properly. We help turn intent into plans, controls, procurement routes, commercial thinking, schedules, governance, and risk management that can survive contact with the real world."
 
-description: "This is where intent becomes a working plan. It is also where many problems can be prevented before they become expensive."
+subHeadline: "Preparing programmes for mobilisation"
 
-outcome: "A programme that is ready to mobilise with clearer controls, responsibilities, and decision routes."
+description: "Effective definition gives programmes the structure, governance and controls they need to succeed. Investing time here can prevent costly issues later."
+
+outcome: "A programme that is ready to mobilise, with clear controls, responsibilities and delivery arrangements."
 
 list:
   items:
-    - listItem: Scope and work breakdown structure
-    - listItem: Procurement and contract strategy
     - listItem: Cost and commercial assurance
-    - listItem: Programme scheduling
     - listItem: Interface planning
-    - listItem: Quantitative risk modelling
     - listItem: Performance reporting
     - listItem: PMO mobilisation
+    - listItem: Procurement and contract strategy
+    - listItem: Programme scheduling
+    - listItem: Quantitative risk modelling
+    - listItem: Scope and work breakdown structure
 
 image: "img-process-3.avif"
 thumbnail: "img-process-3.avif"

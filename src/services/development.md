@@ -4,20 +4,22 @@ metaDesc: "Turn a preferred option into something that can actually be delivered
 
 summary: "Turn a preferred option into something that can actually be delivered. We help refine scope, test feasibility, think through packaging, and bring the right people into the conversation early."
 
-description: "Development is where promising ideas can become awkward. Options need testing. Scope needs pressure. Delivery routes need thinking through. Contractors, stakeholders, and partners may need to be brought in before decisions harden."
+subHeadline: "Turning ideas into strategy"
 
-outcome: "A programme that is ready to mobilise with clearer controls, responsibilities, and decision routes."
+description: "Promising ideas only become successful outcomes when they’re planned and delivered correctly. Options need testing, scope needs challenging and delivery routes need careful evaluation. We help clients develop practical, deliverable solutions that balance commercial, technical and stakeholder considerations."
+
+outcome: "A robust delivery strategy supported by tested options, defined scope and informed commercial decisions."
 
 list:
   items:
-    - listItem: Option appraisal
-    - listItem: Feasibility assessment
-    - listItem: Scope optimisation
-    - listItem: Delivery strategy
-    - listItem: Packaging strategy
+    - listItem: Delivery strategy development
     - listItem: Early contractor engagement
-    - listItem: Risk and opportunity analysis
+    - listItem: Packaging strategy
+    - listItem: Feasibility assessment
+    - listItem: Option appraisal
     - listItem: Procurement route assessment
+    - listItem: Risk and opportunity analysis
+    - listItem: Scope optimisation
 
 image: "img-process-2.avif"
 thumbnail: "img-process-2.avif"

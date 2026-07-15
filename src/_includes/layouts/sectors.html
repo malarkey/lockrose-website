@@ -25,8 +25,8 @@
 {% if lede %}{{ lede | markdown | safe }}{% endif %}
 
 <div class="btn-cta">
-<a href="/contact" class="btn">Discuss a project</a>
-<a href="/client-stories/" class="btn" data-variant="secondary">See proof</a>
+<a href="/contact" class="btn">{{ site.contactCtaText or "Discuss a project" }}</a>
+<a href="/case-studies/" class="btn" data-variant="secondary">See our work</a>
 </div><!-- btn-cta -->
 
 {% if familiarProblemsSection %}
@@ -60,7 +60,7 @@
 <img src="/images/{{ featuredSector.data.image }}" alt="{{ featuredTitle }}" />
 </figure>{% endif %}
 <h2 data-size="3xl">{{ featuredTitle }}</h2>
-{% if featuredSummary %}<p>{{ featuredSummary }}</p>{% endif %}
+{% if featuredSummary %}<p>{{ featuredSummary | markdown | safe }}</p>{% endif %}
 
 </div><!-- one -->
 
@@ -71,7 +71,12 @@
 {% for detail in item.data.details.items %}
 <div>
 <h3>{{ detail.itemHeadline }}</h3>
-<p>{{ detail.itemSummary }}</p>
+{% if detail.itemSummary %}<p>{{ detail.itemSummary }}</p>{% endif %}
+{% if detail.list and detail.list.items %}<ul class="spacing-s">
+{% for listItem in detail.list.items %}
+{% if listItem.listItem %}<li>{{ listItem.listItem }}</li>{% endif %}
+{% endfor %}
+</ul>{% endif %}
 </div>
 {% endfor %}
 {% endif %}

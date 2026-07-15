@@ -15,7 +15,14 @@
 {% if details.items %}
 {% for item in details.items %}
 <h3>{{ item.itemHeadline }}</h3>
-<p>{{ item.itemSummary }}</p>
+{% if item.itemSummary %}<p>{{ item.itemSummary }}</p>{% endif %}
+{% if item.list and item.list.items %}
+<ul class="spacing-s">
+{% for listItem in item.list.items %}
+{% if listItem.listItem %}<li>{{ listItem.listItem }}</li>{% endif %}
+{% endfor %}
+</ul>
+{% endif %}
 {% endfor %}
 {% endif %}
 
