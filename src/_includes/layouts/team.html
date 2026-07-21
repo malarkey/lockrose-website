@@ -6,7 +6,10 @@
 
 <h1 data-size="3xl">{{ pageHeaderTitle }}</h1>
 
-<div class="layout" data-layout="vienna">
+
+<div class="layout" data-layout="stockholm">
+
+<div class="layout" data-layout="zagreb">
 
 {% for member in collections.team %}
 <article class="item-team">
@@ -33,6 +36,30 @@
 </article>
 {% endfor %}
 
+</div><!-- one layout -->
+
+<div>
+
+{% if aboutTitle %}<h3>{{ aboutTitle }}</h3>{% endif %}
+{% if aboutSummary %}{{ aboutSummary | markdown | safe }}{% endif %}
+
+<hr>
+
+{% if careersTitle %}<h3>{{ careersTitle }}</h3>{% endif %}
+{% if careersSummary %}{{ careersSummary | markdown | safe }}{% endif %}
+
+<div class="btn-cta">
+<a href="/careers/" class="btn" data-variant="secondary">Careers</a>
+<a href="https://apply.workable.com/lockrose-limited/" class="btn">Available vacancies</a>
+</div><!-- btn-cta -->
+
+</div><!-- two -->
+
 </div><!-- layout -->
+
+
+
+
+
 
 {% endblock %}

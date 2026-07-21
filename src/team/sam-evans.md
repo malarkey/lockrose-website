@@ -8,7 +8,7 @@ email: "sam.evans@lockrose.com"
 url: ""
 linkedin: "https://www.linkedin.com/in/sam-evans-fdeng-ipma-mapm-740b6641/"
 image: "img-bio-sam.avif"
-summary: "As Co-Founder, Sam established the business around a simple belief: successful delivery depends on having experienced people close to the work, providing trusted judgement, clear direction and practical support when it matters most."
+summary: "As co-founder, Sam established the business around a simple belief: successful delivery depends on having experienced people close to the work, providing trusted judgement, clear direction and practical support when it matters most."
 careerTimeline:
   - period: "2025 – Present"
     title: "Managing Director, Lockrose"

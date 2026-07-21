@@ -8,7 +8,7 @@ email: "jamie.mendoza@lockrose.com"
 url: ""
 linkedin: "https://www.linkedin.com/in/jamie-mendoza-chpp-fapm-mba-bsc-8a9b4552/"
 image: "img-bio-jamie.avif"
-summary: "As Co-Founder, Jamie shaped the business around a belief that successful programmes rely on strong relationships as much as technical capability. Clients value trusted partners who understand the realities of delivery, communicate clearly and remain focused on what matters most."
+summary: "As co-founder, Jamie shaped the business around a belief that successful programmes rely on strong relationships as much as technical capability. Clients value trusted partners who understand the realities of delivery, communicate clearly and remain focused on what matters most."
 careerTimeline:
   - period: "2025 – Present"
     title: "Managing Director, Lockrose"

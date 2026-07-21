@@ -84,7 +84,7 @@
 <path fill="#f2f8f5" class="animation-contact-glow" d="m1144 449 12.5-20 12.5 20v40h-25z"/>
 </g>
 
-<a aria-controls="animation-contact-overlay animation-contact-lightnings animation-contact-mask" aria-label="Toggle the contact illustration storm" aria-pressed="false" href="#" id="animation-contact-trigger" role="button">
+<a aria-controls="animation-contact-overlay animation-contact-lightnings animation-contact-mask" aria-hidden="true" aria-label="Toggle the contact illustration storm" aria-pressed="false" display="none" href="#" id="animation-contact-trigger" role="button" tabindex="-1">
 <path fill="#ffbf00" fill-rule="evenodd" d="m1376 441 15-24 15 24v48h-30zm36 0 15-24 15 24v48h-30z"/>
 </a>
 

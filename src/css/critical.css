@@ -270,8 +270,6 @@ opacity: 1; }
 
 #animation-contact #animation-contact-trigger {
 cursor: pointer; }
-
-
 }
 
 html {
@@ -293,7 +291,7 @@ font-optical-sizing: auto;
 font-size: 1em;
 font-style: normal;
 font-variation-settings: "slnt" 0, "FLAR" 0, "VOLM" 0;
-font-weight: var(--font-weight-r);
+font-weight: var(--font-weight-l);
 line-height: var(--lineheight-r);
 margin: 0 auto;
 max-width: var(--max-width);
@@ -375,6 +373,7 @@ PARAGRAPHS
 
 p {
 font-size: var(--font-size-r);
+font-weight: var(--font-weight-l);
 orphans: 3; }
 
 /* Heading + paragraph spacing */
@@ -729,7 +728,8 @@ margin-bottom: var(--spacing-r); }
 #logos-accreditations {
 display: block;
 margin-block: var(--spacing-m) 0;
-max-inline-size: 480px; }
+margin-inline: auto;
+max-inline-size: 800px; }
 
 
 
@@ -1490,6 +1490,13 @@ margin-block-end: var(--spacing-r); }
 flex: 1;
 margin-block-end: unset; }
 
+[data-spaced="true"] {
+display: flex;
+flex-direction: column; }
+
+[data-spaced="true"] > *:last-child {
+margin-block-start: auto; }
+
 [data-layout="grid"] {
 display: grid;
 gap: var(--spacing-r);
@@ -1544,7 +1551,10 @@ padding-block-end: unset; }
 
 [data-layout="tbilisi"] > * { grid-column: b2 / b5; }
 [data-layout="vienna"],
-[data-layout="vilnius"] { grid-template-columns: var(--grid-12-col); }
+[data-layout="vilnius"],
+[data-layout="zagreb"] { grid-template-columns: var(--grid-12-col); }
+
+[data-layout="zagreb"] > * { grid-column: span 6; }
 [data-layout="vienna"] > * { grid-column: span 4; }
 [data-layout="vilnius"] > * { grid-column: span 3; }
 

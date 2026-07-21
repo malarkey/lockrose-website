@@ -623,6 +623,22 @@ collections:
           - label: Title
             name: title
             widget: string
+          - label: About title
+            name: aboutTitle
+            widget: string
+            required: false
+          - label: About summary
+            name: aboutSummary
+            widget: text
+            required: false
+          - label: Careers title
+            name: careersTitle
+            widget: string
+            required: false
+          - label: Careers summary
+            name: careersSummary
+            widget: text
+            required: false
   - name: globals
     label: Globals
     files:

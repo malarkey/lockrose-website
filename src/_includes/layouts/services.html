@@ -119,6 +119,7 @@
 
 {% if capabilitySection and capabilitySection.items %}
 {% for item in capabilitySection.items %}
+<div data-spaced="true">
 <div>
 {% if item.icon %}<img src="/images/{{ item.icon }}" alt="" class="icon-texture">{% endif %}
 <h3>{{ item.title }}</h3>
@@ -127,15 +128,18 @@
 {% for listItem in item.list.items %}
 {% if listItem.listItem %}<li>{{ listItem.listItem }}</li>{% endif %}
 {% endfor %}</ul>{% endif %}
+</div><!-- one -->
 
 {% if item.list2 and item.list2.items %}
+<div>
 <hr>
 <h3 data-size="r">They bring</h3>
 <ul class="spacing-s">
 {% for listItem in item.list2.items %}
 {% if listItem.listItem %}<li>{{ listItem.listItem }}</li>{% endif %}
 {% endfor %}</ul>{% endif %}
-</div>
+</div><!-- two -->
+</div><!-- data-spaced -->
 {% endfor %}
 {% endif %}
 

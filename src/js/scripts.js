@@ -375,10 +375,20 @@ const contactTrigger = document.querySelector("#animation-contact-trigger");
 const lightningItems = Array.from(document.querySelectorAll("#animation-contact .animation-contact-lightning"));
 const lightningIndexes = lightningItems.map((_, index) => index);
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const now = new Date();
+const isHalloween = now.getMonth() === 9 && now.getDate() === 31;
 
 if (!contactAnimation || !contactLightnings || !contactMask || !contactOverlay || !contactTrigger) {
 return;
 }
+
+if (!isHalloween) {
+return;
+}
+
+contactTrigger.removeAttribute("display");
+contactTrigger.removeAttribute("aria-hidden");
+contactTrigger.removeAttribute("tabindex");
 
 const timeoutIds = new Set();
 let isStormActive = false;

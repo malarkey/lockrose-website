@@ -20,21 +20,24 @@ padding-block-end: var(--spacing-r); }
 .services-tabs-button {
 background-color: transparent;
 border: 0;
-border-block-end: var(--border-width-l) solid transparent;
+border-block-end: 10px solid transparent;
 border-radius: unset;
 box-sizing: border-box;
 color: var(--color-text-default);
 flex: 1;
-font-size: var(--font-size-r);
+font-size: var(--font-size-m);
+font-weight: var(--font-weight-m);
+letter-spacing: -.025em;
 opacity: .5;
-padding: 0 0 var(--spacing-s); }
+padding: 0 0 var(--spacing-s);
+text-decoration: unset;}
 
 .services-tabs-button:hover {
 background-color: transparent;
 color: var(--color-text-default); }
 
 .services-tabs-button[aria-selected="true"] {
-border-block-end-color: var(--color-border);
+border-block-end-color: var(--color-accent);
 font-weight: var(--font-weight-m);
 opacity: 1; }
 
@@ -47,7 +50,7 @@ gap: var(--spacing-r);
 grid-template-columns: 1.25fr 1fr; }
 
 .services-tabs-list {
-border-block-end: var(--border-width-l) solid var(--color-border);
+border-block-end: var(--border-width-r) solid var(--color-accent);
 display: flex;
 flex-wrap: wrap;
 gap: var(--spacing-l);
