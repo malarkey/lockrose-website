@@ -21,18 +21,15 @@
 </figure>
 {% endif %}
 
-{% if member.data.qualifications %}<small>{{ member.data.qualifications }}</small>{% endif %}
-<h2><a href="{{ member.url }}">{{ member.data.name }}</a></h2>
+<h2><a href="{{ member.url }}">{{ member.data.name }}</a> {% if member.data.qualifications %}<small style="display:inline;">{{ member.data.qualifications }}</small>{% endif %}</h2>
 
 {% if member.data.summary %}<p>{{ member.data.summary }}</p>{% endif %}
 
-<ul class="alt-inline">
-{% if member.data.email %}<li><a href="mailto:{{ member.data.email }}">{% include "partials/icons/icon-email.svg" %}<span data-visibility="hidden">Email</span></a></li>{% endif %}
+<p>{% if member.data.email %}<a href="mailto:{{ member.data.email }}">{% include "partials/icons/icon-email.svg" %}<span data-visibility="hidden">Email</span></a>{% endif %}
 
-{% if member.data.url %}<li><a href="{{ member.data.url }}">{% include "partials/icons/icon-url.svg" %}<span data-visibility="hidden">Website</span></a></li>{% endif %}
+{% if member.data.url %}<a href="{{ member.data.url }}">{% include "partials/icons/icon-url.svg" %}<span data-visibility="hidden">Website</span></a>{% endif %}
 
-{% if member.data.linkedin %}<li><a href="{{ member.data.linkedin }}">{% include "partials/icons/icon-linkedin.svg" %}<span data-visibility="hidden">LinkedIn</span></a></li>{% endif %}
-</ul>
+{% if member.data.linkedin %}<a href="{{ member.data.linkedin }}">{% include "partials/icons/icon-linkedin.svg" %}<span data-visibility="hidden">LinkedIn</span></a>{% endif %}</p>
 </article>
 {% endfor %}
 

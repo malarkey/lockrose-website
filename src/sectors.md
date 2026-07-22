@@ -5,13 +5,13 @@ metaDesc: Lockrose’s strongest experience is in energy and power infrastructur
 permalink: /sectors/
 
 lede: |
-  Lockrose’s strongest experience is in energy and power infrastructure where projects are complex, regulated, time-sensitive, and full of moving parts. The same pressures appear across utilities, transport, and public sector programmes.
+  Our strongest experience is in energy and power infrastructure where projects are full of moving parts, regulated, and often time-sensitive. Those same pressures occur across utilities, transport, and public sector programmes.
 
 familiarProblemsSection:
   title: Different sectors, familiar challenges
-  text: Every sector has its own language, priorities and constraints. But the delivery challenges are often the same. Projects need capable leadership. Teams need alignment. Risks need managing. Decisions need to be made at the right time. Progress needs maintaining under pressure. Lockrose helps organisations navigate these challenges by providing experienced professionals who bring clarity, structure and confidence to complex programmes.
+  text: Every sector has its own issues, but delivery challenges are often the same. Projects need alignment, teams need leadership, and progress needs maintaining under pressure. We help organisations navigate these challenges by providing clarity, confidence, structure to complex programmes.
 
-featuredTitle: Our roots are in energy. The challenges are universal.
+featuredTitle: Our roots are in energy, but the challenges are universal
 
 featuredSummary: |
 

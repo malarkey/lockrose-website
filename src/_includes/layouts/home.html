@@ -30,7 +30,10 @@
 </div><!-- one -->
 
 <div>
-<img src="/images/img-index 1.webp" alt="">
+<figure>
+{% include "partials/svgs/img-index-1.svg" %}
+{% if featureImageCaption %}<figcaption>{{ featureImageCaption }}</figcaption>{% endif %}
+</figure>
 </div><!-- two -->
 
 </div><!-- introduction -->
@@ -83,7 +86,8 @@
 
 <div>
 <h2 data-size="2xl">{{ experienceSection.title }}</h2>
-{% if experienceSection.text %}<p class="alt-lede">{{ experienceSection.text }}</p>{% endif %}
+{% if experienceSection.lede %}<p class="alt-lede">{{ experienceSection.lede }}</p>{% endif %}
+{% if experienceSection.text %}<p>{{ experienceSection.text }}</p>{% endif %}
 </div><!-- one -->
 
 <div data-layout="grid" data-variation="dividers">

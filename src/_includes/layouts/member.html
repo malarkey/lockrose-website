@@ -5,13 +5,11 @@
 <div class="layout" data-layout="paris">
 
 <div>
-
 {% if image %}
 <figure><img src="/images/{{ image }}" alt="{{ name }}"></figure>
 {% endif %}
 
-{% if qualifications %}<small>{{ qualifications }}</small>{% endif %}
-<h1>{{ name }}</h1>
+<h1>{{ name }} {% if qualifications %}<small style="display:inline;">{{ qualifications }}</small>{% endif %}</h1>
 
 {% if location %}<p>{{ location }}</p>{% endif %}
 
@@ -19,11 +17,11 @@
 
 {{ content | markdown | safe }}
 
-{% if email %}<a href="mailto:{{ email }}">{% include "partials/icons/icon-email.svg" %}<span data-visibility="hidden">Email</span></a>{% endif %}
+<p>{% if email %}<a href="mailto:{{ email }}">{% include "partials/icons/icon-email.svg" %}<span data-visibility="hidden">Email</span></a>{% endif %}
 
 {% if linkedin %}<a href="{{ linkedin }}">{% include "partials/icons/icon-linkedin.svg" %}<span data-visibility="hidden">LinkedIn</span></a>{% endif %}
 
-{% if url %}<a href="{{ url }}">{% include "partials/icons/icon-url.svg" %}<span data-visibility="hidden">Website</span></a>{% endif %}
+{% if url %}<a href="{{ url }}">{% include "partials/icons/icon-url.svg" %}<span data-visibility="hidden">Website</span></a>{% endif %}</p>
 
 </div><!-- one -->
 

@@ -5,7 +5,7 @@ layout: layouts/about.html
 permalink: /why-lockrose/
 
 lede: |
-  <p class="alt-lede">Plans are easy to create. Delivering them successfully is the real test. Clients choose us because we provide experienced consultants who understand the realities of project delivery. Whatever the challenge, we bring the expertise and support to keep projects moving forward and deliver results that matter.</p>
+  <p class="alt-lede">Plans are easy to create. Delivering them successfully is the real test. Clients choose us because we provide consultants who understand the realities of project delivery. Whatever the challenge, we bring expertise and support to deliver the results that matter.</p>
 
 aside: |
 
@@ -14,7 +14,7 @@ featureImageCaption: "Clients choose us because they want experienced profession
 
 roleChartSection:
   title: The right people make all the difference
-  text: Projects rarely fail because there aren’t enough people. They struggle when critical roles lack the experience, judgement, or leadership needed to navigate complexity. We focus on capability first, providing experienced project professionals who can deliver the moment they arrive. That’s why clients turn to us.
+  text: Projects rarely fail because there aren’t enough people. They struggle when critical roles lack the experience, judgement, or leadership needed. We provide project professionals who start delivering the moment they arrive.
 
 experienceSection:
   title: Four reasons clients choose Lockrose
@@ -64,8 +64,8 @@ caseStudyPromos:
   - london-power-tunnels-2
 
 trustedSection:
-  title: Close enough to care. Experienced enough to be trusted
-  text: We stay close to delivery, working alongside clients to provide clear advice, practical support, and experienced leadership. Clients trust us because we combine technical expertise with sound judgement. We help organisations navigate complexity, make confident decisions, and deliver successful outcomes.
+  title: Close enough to care, experienced enough to be trusted
+  text: We work alongside clients, providing advice, leadership, and support. They trust us because we combine expertise with sound judgement to help them navigate complexity, make decisions, and deliver success.
 
 comparisonSection:
   items:

@@ -6,18 +6,18 @@ layout: layouts/home.html
 lede: "Guiding complex projects through the realities of delivery"
 
 aside: |
-  <p class="alt-lede">Major projects rarely follow a straight line. Lockrose provides the experience and judgement needed to navigate complexity, overcome obstacles and keep programmes moving forward.</p>
+  <p class="alt-lede">Major projects rarely follow a straight line. We provide the experience and judgement needed to navigate complexity, overcome obstacles, and keep programmes moving forward.</p>
 
 featureImage: ""
 featureImageCaption: ""
 
 homeStats:
   title: National Grid experience
-  text: Trusted on major electricity infrastructure programmes where access, timing, and delivery matter.
+  text: We are trusted on major electricity infrastructure programmes where delivery matters.
   items:
     - value: £1bn
       label: programme
-      description: "Lockrose supported London Power Tunnels 2, a £1bn, 8-year programme to upgrade London’s electricity network. "
+      description: "We supported London Power Tunnels 2, a £1bn, 8-year programme to upgrade London’s electricity network. "
     - value: 30km
       label: cable tunnels
       description: "The project includes 30km of cable tunnels, critical substation works, and four main works contractors."
@@ -27,7 +27,8 @@ homeStats:
 
 experienceSection:
   title: Small enough to be close. Experienced enough to be trusted
-  text: Projects stall for all kinds of reasons. The right people are not in place. Contractors pull in different directions. Decisions take too long. Risks sit unresolved until they become expensive. Lockrose steps into that pressure with people who can lead, coordinate, challenge, and move work forward.
+  lede: Projects stall for all kinds of reasons.
+  text: The right people not in place, contractors pulling in different directions, or decisions taking too long. We step into that pressure with people who can coordinate and lead the work forward.
   items:
     - title: Deliberately lean
       text: Fewer layers. Faster decisions. Direct access to people who can actually solve the problem.
@@ -45,11 +46,11 @@ experienceSection:
 servicesSection:
   title: How we help
   lede: We bring control to the messy middle of major projects
-  text: "Most infrastructure programmes struggle when the plan meets reality: shifting priorities, delayed decisions, commercial pressure, access constraints, and risks that refuse to stay on a spreadsheet. Lockrose helps clients get hold of those moving parts and keep work moving from early strategy through to handover."
+  text: "Most infrastructure programmes struggle when the plan meets reality: shifting priorities, delayed decisions, commercial pressure, access constraints, and risks that refuse to stay on a spreadsheet. We help clients move from early strategy through to handover."
 
 energyExperienceSection:
   title: Deep energy experience
-  text: Lockrose’s strongest experience is in energy and power infrastructure. That matters because those projects are complex, regulated, time-sensitive, and full of moving parts.
+  text: Our strongest experience is in energy and power infrastructure. This matters because those projects are complex, full of moving parts, regulated, and time-sensitive.
 
 caseStudyPromos:
   - london-power-tunnels-2

@@ -8,7 +8,7 @@ lede: "We help organisations bridge the gap between strategy and delivery by pro
 
 options:
   items:
-    - itemHeadline: Need experience leadrship?
+    - itemHeadline: Need experience leadership?
       itemSummary: Experienced project and programme professionals who provide direction, coordination and accountability across complex programmes.
     - itemHeadline: Need commercial confidence?
       itemSummary: Commercial specialists who help clients make informed decisions, manage risk and maximise value throughout delivery.
@@ -27,11 +27,11 @@ supportSection:
 
 capabilitySection:
   title: The right capability, joined up
-  text: Lockrose can provide individual specialists or build integrated teams across the programme lifecycle. The value is not simply having the right people, but ensuring they work together to improve decision-making, strengthen delivery, and achieve successful outcomes.
+  text: We can provide individual specialists or integrated teams. Our value is not simply having the right people, but ensuring they work together to improve decision-making, strengthen delivery, and achieve success.
 
   items:
     - title: Project and programme leadership
-      text: Senior people who provide direction, coordination and accountability across complex programmes.
+      text: Senior people provide accountability, coordination, and direction across complex programmes.
       icon: icon-texture-1.svg
       list:
         items:
@@ -47,13 +47,13 @@ capabilitySection:
           - listItem: Stakeholder alignment
 
     - title: Commercial management
-      text: Commercial expertise that helps clients make informed decisions, manage risks, and maximise value.
+      text: Commercial expertise helps clients make informed decisions, manage risks, and maximise value.
       icon: icon-texture-2.svg
       list:
         items:
           - listItem: Commercial Manager
           - listItem: Senior Quantity Surveyor
-          - listItem: Quantity Surveyor.
+          - listItem: Quantity Surveyor
       list2:
         items:
           - listItem: Change and value management
@@ -68,7 +68,7 @@ capabilitySection:
         items:
           - listItem: Senior Planning Manager
           - listItem: Senior Planner
-          - listItem: Planner.
+          - listItem: Planner
       list2:
         items:
           - listItem: Performance analysis
